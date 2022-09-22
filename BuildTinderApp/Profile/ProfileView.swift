@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             ZStack(alignment: .topTrailing) {
                 RoundedImage(url: URL(string: "https://picsum.photos/400"))
                     .frame(height: 175)
@@ -27,6 +27,17 @@ struct ProfileView: View {
                 .padding(.vertical, 10)
                 .offset(x: -10)
             }
+            
+            Spacer().frame(height: 18)
+            
+            Text("大久保, 23")
+                .font(.system(size: 26))
+                .fontWeight(.medium)
+            
+            Spacer().frame(height: 8)
+            
+            Text("Software Engineer")
+            
             Spacer()
         }
     }
