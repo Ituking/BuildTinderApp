@@ -30,16 +30,18 @@ struct ProfileView: View {
             
             Spacer().frame(height: 18)
             
-            Text("大久保, 23")
-                .foregroundColor(.textTitle)
-                .font(.system(size: 26))
-                .fontWeight(.medium)
-            
-            Spacer().frame(height: 8)
-            
-            Text("Software Engineer")
-            
-            Spacer().frame(height: 22)
+            Group {
+                Text("大久保, 23")
+                    .foregroundColor(.textTitle)
+                    .font(.system(size: 26))
+                    .fontWeight(.medium)
+                
+                Spacer().frame(height: 8)
+                
+                Text("Software Engineer")
+                
+                Spacer().frame(height: 22)
+            }
             
             HStack(alignment: .top) {
                 Spacer()
@@ -130,7 +132,7 @@ struct ProfileView: View {
                 //
             }
             
-//Spacer()
+            Spacer()
             
         }
     }
