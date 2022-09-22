@@ -50,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				C7E1278628DCB4AC0030C1F9 /* BuildTinderApp */,
+				C7E1279528DCB57F0030C1F9 /* Extensions.swift */,
 				C7E1278528DCB4AC0030C1F9 /* Products */,
 				C7E127A628DCCC5B0030C1F9 /* Frameworks */,
 			);
@@ -68,7 +69,6 @@
 			children = (
 				C7E1278728DCB4AC0030C1F9 /* BuildTinderAppApp.swift */,
 				C7E1278928DCB4AC0030C1F9 /* ContentView.swift */,
-				C7E1279528DCB57F0030C1F9 /* Extensions.swift */,
 				C7E1279728DCB5B90030C1F9 /* AppStateManager.swift */,
 				C7E1279D28DCB66A0030C1F9 /* MainTabBar */,
 				C7E127A028DCB7080030C1F9 /* Profile */,

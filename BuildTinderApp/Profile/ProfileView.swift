@@ -31,12 +31,24 @@ struct ProfileView: View {
             Spacer().frame(height: 18)
             
             Text("大久保, 23")
+                .foregroundColor(.textTitle)
                 .font(.system(size: 26))
                 .fontWeight(.medium)
             
             Spacer().frame(height: 8)
             
             Text("Software Engineer")
+            
+            HStack {
+                
+                VStack {
+                    Button(action: {}, label: {
+                        Image(systemName: "gearshape.fill")
+                            .foregroundColor(Color.gray.opacity(0.5))
+                    })
+                }
+                
+            }
             
             Spacer()
         }
@@ -46,6 +58,8 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
-            .background(Color.gray)
+            .background(
+                Color(.systemGray6)
+                    .opacity(0.35))
     }
 }

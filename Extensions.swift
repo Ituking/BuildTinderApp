@@ -19,3 +19,8 @@ extension View {
         }
     }
 }
+
+extension Color {
+    static let textPrimary = Color.gray.opacity(0.9)
+    static let textTitle = Color.black.opacity(0.8)
+}
