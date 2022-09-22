@@ -129,10 +129,16 @@ struct ProfileView: View {
             .cornerRadius(12)
             .padding(.horizontal, 8)
             
-            ProfileSwipePromo {
-                //
+            ZStack {
+                Color.gray.opacity(0.15)
+                
+                ProfileSwipePromo {
+                    //
+                }
             }
+            .padding(.top, 18)
         }
+        .foregroundColor(Color.black.opacity(0.75))
     }
 }
 
