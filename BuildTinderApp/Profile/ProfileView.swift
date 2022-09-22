@@ -11,8 +11,8 @@ struct ProfileView: View {
     var body: some View {
         VStack {
             ZStack(alignment: .topTrailing) {
-                Circle()
-                    .frame(height: 200)
+                RoundedImage(url: URL(string: "https://picsum.photos/400"))
+                    .frame(height: 175)
                 
                 Button(action: {}, label: {
                     Image(systemName: "pencil")
@@ -24,6 +24,8 @@ struct ProfileView: View {
                         .clipShape(Circle())
                         .shadow(radius: 6)
                 })
+                .padding(.vertical, 10)
+                .offset(x: -10)
             }
             Spacer()
         }

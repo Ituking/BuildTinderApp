@@ -72,6 +72,7 @@
 				C7E1279728DCB5B90030C1F9 /* AppStateManager.swift */,
 				C7E1279D28DCB66A0030C1F9 /* MainTabBar */,
 				C7E127A028DCB7080030C1F9 /* Profile */,
+				C7E127AE28DCD11D0030C1F9 /* HelperView */,
 				C7E1278B28DCB4B00030C1F9 /* Assets.xcassets */,
 				C7E1278D28DCB4B00030C1F9 /* Preview Content */,
 			);
@@ -99,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				C7E1279E28DCB6CB0030C1F9 /* ProfileView.swift */,
-				C7E127A128DCB7310030C1F9 /* RoundedImage.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -109,6 +109,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7E127AE28DCD11D0030C1F9 /* HelperView */ = {
+			isa = PBXGroup;
+			children = (
+				C7E127A128DCB7310030C1F9 /* RoundedImage.swift */,
+			);
+			path = HelperView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
