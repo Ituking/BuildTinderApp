@@ -102,12 +102,24 @@ struct ProfileView: View {
                 Spacer()
             }
             
+            Spacer().frame(height: 13)
+            
             HStack {
                 Text("Photo Tip: Make waves with a beach photo and get more likes")
                     .multilineTextAlignment(.leading)
                     .lineLimit(3)
                     .foregroundColor(.white)
                     .font(.system(size: 14))
+                
+                Button(action: {}, label: {
+                    Image(systemName: "plus")
+                        .font(.system(size: 12))
+                        .fontWeight(.heavy)
+                        .foregroundColor(.pink)
+                        .padding(6)
+                })
+                .background(Color.white)
+                .clipShape(Circle())
             }
             .padding()
             .background(Color.pink)
