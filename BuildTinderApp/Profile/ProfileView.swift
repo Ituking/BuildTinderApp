@@ -124,8 +124,13 @@ struct ProfileView: View {
             .padding()
             .background(Color.pink)
             .cornerRadius(12)
+            .padding(.horizontal, 8)
             
-            Spacer()
+            ProfileSwipePromo {
+                //
+            }
+            
+//Spacer()
             
         }
     }

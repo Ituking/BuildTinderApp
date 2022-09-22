@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C740FA7828DCF19F00BA50DB /* ProfileSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA7728DCF19F00BA50DB /* ProfileSwipePromo.swift */; };
 		C7E1278828DCB4AC0030C1F9 /* BuildTinderAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E1278728DCB4AC0030C1F9 /* BuildTinderAppApp.swift */; };
 		C7E1278A28DCB4AC0030C1F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E1278928DCB4AC0030C1F9 /* ContentView.swift */; };
 		C7E1278C28DCB4B00030C1F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7E1278B28DCB4B00030C1F9 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C740FA7728DCF19F00BA50DB /* ProfileSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwipePromo.swift; sourceTree = "<group>"; };
 		C7E1278428DCB4AC0030C1F9 /* BuildTinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuildTinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E1278728DCB4AC0030C1F9 /* BuildTinderAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildTinderAppApp.swift; sourceTree = "<group>"; };
 		C7E1278928DCB4AC0030C1F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				C7E1279E28DCB6CB0030C1F9 /* ProfileView.swift */,
+				C740FA7728DCF19F00BA50DB /* ProfileSwipePromo.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				C7E127A228DCB7310030C1F9 /* RoundedImage.swift in Sources */,
 				C7E1278A28DCB4AC0030C1F9 /* ContentView.swift in Sources */,
 				C7E1279828DCB5B90030C1F9 /* AppStateManager.swift in Sources */,
+				C740FA7828DCF19F00BA50DB /* ProfileSwipePromo.swift in Sources */,
 				C7E1279628DCB57F0030C1F9 /* Extensions.swift in Sources */,
 				C7E1279A28DCB6030030C1F9 /* MainView.swift in Sources */,
 				C7E1279F28DCB6CB0030C1F9 /* ProfileView.swift in Sources */,
