@@ -6,15 +6,21 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct RoundedImage: View {
+    var url: URL?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        KFImage(url)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .clipShape(Circle())
     }
 }
 
 struct RoundedImage_Previews: PreviewProvider {
     static var previews: some View {
-        RoundedImage()
+        RoundedImage(url: URL(string: "https://picsum.photos/400"))
     }
 }
