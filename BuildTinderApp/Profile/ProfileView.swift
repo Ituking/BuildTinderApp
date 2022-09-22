@@ -39,7 +39,9 @@ struct ProfileView: View {
             
             Text("Software Engineer")
             
-            HStack {
+            Spacer().frame(height: 22)
+            
+            HStack(alignment: .top) {
                 
                 Button(action: {}, label: {
                     VStack {
@@ -52,6 +54,40 @@ struct ProfileView: View {
                             .shadow(radius: 6)
                         
                         Text("SETTINGS")
+                            .font(.system(size: 14))
+                            .fontWeight(.medium)
+                            .foregroundColor(.textSecondary)
+                    }
+                })
+                
+                Button(action: {}, label: {
+                    VStack {
+                        Image(systemName: "camera.fill")
+                            .foregroundColor(Color.white)
+                            .font(.system(size: 38))
+                            .padding(22)
+                            .background(Color.red)
+                            .clipShape(Circle())
+                            .shadow(radius: 6)
+                        
+                        Text("ADD MEDIA")
+                            .font(.system(size: 14))
+                            .fontWeight(.medium)
+                            .foregroundColor(.textSecondary)
+                    }
+                })
+                
+                Button(action: {}, label: {
+                    VStack {
+                        Image(systemName: "shield.fill")
+                            .foregroundColor(Color.gray.opacity(0.5))
+                            .font(.system(size: 30))
+                            .padding(10)
+                            .background(Color.white)
+                            .clipShape(Circle())
+                            .shadow(radius: 6)
+                        
+                        Text("SAFETY")
                             .font(.system(size: 14))
                             .fontWeight(.medium)
                             .foregroundColor(.textSecondary)
