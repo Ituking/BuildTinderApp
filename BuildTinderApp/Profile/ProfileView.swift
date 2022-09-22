@@ -42,6 +42,7 @@ struct ProfileView: View {
             Spacer().frame(height: 22)
             
             HStack(alignment: .top) {
+                Spacer()
                 
                 Button(action: {}, label: {
                     VStack {
@@ -60,6 +61,8 @@ struct ProfileView: View {
                     }
                 })
                 
+                Spacer()
+                
                 Button(action: {}, label: {
                     VStack {
                         Image(systemName: "camera.fill")
@@ -77,6 +80,8 @@ struct ProfileView: View {
                     }
                 })
                 
+                Spacer()
+                
                 Button(action: {}, label: {
                     VStack {
                         Image(systemName: "shield.fill")
@@ -93,6 +98,8 @@ struct ProfileView: View {
                             .foregroundColor(.textSecondary)
                     }
                 })
+                
+                Spacer()
             }
             
             Spacer()
