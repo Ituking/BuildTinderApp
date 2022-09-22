@@ -41,25 +41,33 @@ struct ProfileView: View {
             
             HStack {
                 
-                VStack {
-                    Button(action: {}, label: {
+                Button(action: {}, label: {
+                    VStack {
                         Image(systemName: "gearshape.fill")
                             .foregroundColor(Color.gray.opacity(0.5))
-                    })
-                }
-                
+                            .font(.system(size: 30))
+                            .padding(10)
+                            .background(Color.white)
+                            .clipShape(Circle())
+                            .shadow(radius: 6)
+                        
+                        Text("SETTINGS")
+                            .font(.system(size: 14))
+                            .fontWeight(.medium)
+                            .foregroundColor(.textSecondary)
+                    }
+                })
             }
             
             Spacer()
+            
         }
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
-            .background(
-                Color(.systemGray6)
-                    .opacity(0.35))
+    struct ProfileView_Previews: PreviewProvider {
+        static var previews: some View {
+            ProfileView()
+                .background(Color.defaultBackground)
+        }
     }
-}
