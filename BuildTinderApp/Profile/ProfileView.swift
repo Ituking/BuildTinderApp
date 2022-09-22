@@ -30,6 +30,7 @@ struct ProfileView: View {
             
             Spacer().frame(height: 18)
             
+            // Name + Job Title
             Group {
                 Text("大久保, 23")
                     .foregroundColor(.textTitle)
@@ -131,9 +132,6 @@ struct ProfileView: View {
             ProfileSwipePromo {
                 //
             }
-            
-            Spacer()
-            
         }
     }
 }
