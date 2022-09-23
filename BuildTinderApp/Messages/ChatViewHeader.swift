@@ -28,12 +28,27 @@ struct ChatViewHeader: View {
                         .fontWeight(.semibold)
                 })
                 
+                Spacer()
+                
+                VStack(spacing: 0) {
+                    RoundedImage(url: imageURL)
+                        .frame(height: 50)
+                    
+                    Text(name)
+                        .foregroundColor(Color.textSecondary)
+                        .font(.system(size: 14))
+                }
+                
+                Spacer()
+                
                 Button(action: { videoAction() }, label: {
                     Image(systemName: "video.fill")
                         .font(.system(size: 20))
                         .fontWeight(.bold)
                 })
             }
+            .padding(.horizontal, 22)
+            .padding(.vertical, 10)
         }
         .frame(height: 50)
     }
