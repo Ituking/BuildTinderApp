@@ -16,3 +16,8 @@ struct Message {
         return person == nil
     }
 }
+
+extension Message {
+    static let exampleSent = Message(content: "こんにちは")
+    static let exampleReceived = Message(content: "こんにちは", person: Person.example)
+}
