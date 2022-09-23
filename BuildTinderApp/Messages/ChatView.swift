@@ -35,9 +35,23 @@ struct ChatView: View {
                     }
                 })
                 
-                TextField("Type a message", text: $typingMessage)
-                    .foregroundColor(Color.textPrimary)
-                    .textFieldStyle(PlainTextFieldStyle())
+                ZStack {
+                    Color.textfieldBG
+                    
+                    TextField("Type a message", text: $typingMessage)
+                        .foregroundColor(Color.textPrimary)
+                        .textFieldStyle(PlainTextFieldStyle())
+                        .frame(height: 45)
+                    .padding(.horizontal)
+                }
+                .frame(height: 40)
+                .cornerRadius(20)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.gray.opacity(0.3), lineWidth: 1)
+                )
+                .padding(.horizontal)
+                .padding(.bottom)
             }
             
             ChatViewHeader(
