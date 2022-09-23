@@ -10,7 +10,7 @@
 		C740FA7828DCF19F00BA50DB /* ProfileSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA7728DCF19F00BA50DB /* ProfileSwipePromo.swift */; };
 		C740FA7A28DD6DB900BA50DB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA7928DD6DB900BA50DB /* Message.swift */; };
 		C740FA7D28DD706E00BA50DB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA7C28DD706E00BA50DB /* Person.swift */; };
-		C740FA7F28DD71CA00BA50DB /* MessageThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA7E28DD71CA00BA50DB /* MessageThread.swift */; };
+		C740FA7F28DD71CA00BA50DB /* MessagePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA7E28DD71CA00BA50DB /* MessagePreview.swift */; };
 		C7E1278828DCB4AC0030C1F9 /* BuildTinderAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E1278728DCB4AC0030C1F9 /* BuildTinderAppApp.swift */; };
 		C7E1278A28DCB4AC0030C1F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E1278928DCB4AC0030C1F9 /* ContentView.swift */; };
 		C7E1278C28DCB4B00030C1F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7E1278B28DCB4B00030C1F9 /* Assets.xcassets */; };
@@ -28,7 +28,7 @@
 		C740FA7728DCF19F00BA50DB /* ProfileSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwipePromo.swift; sourceTree = "<group>"; };
 		C740FA7928DD6DB900BA50DB /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		C740FA7C28DD706E00BA50DB /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		C740FA7E28DD71CA00BA50DB /* MessageThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThread.swift; sourceTree = "<group>"; };
+		C740FA7E28DD71CA00BA50DB /* MessagePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePreview.swift; sourceTree = "<group>"; };
 		C7E1278428DCB4AC0030C1F9 /* BuildTinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuildTinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E1278728DCB4AC0030C1F9 /* BuildTinderAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildTinderAppApp.swift; sourceTree = "<group>"; };
 		C7E1278928DCB4AC0030C1F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 			children = (
 				C740FA7928DD6DB900BA50DB /* Message.swift */,
 				C740FA7C28DD706E00BA50DB /* Person.swift */,
-				C740FA7E28DD71CA00BA50DB /* MessageThread.swift */,
+				C740FA7E28DD71CA00BA50DB /* MessagePreview.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,7 +226,7 @@
 				C740FA7A28DD6DB900BA50DB /* Message.swift in Sources */,
 				C7E1279F28DCB6CB0030C1F9 /* ProfileView.swift in Sources */,
 				C7E1278828DCB4AC0030C1F9 /* BuildTinderAppApp.swift in Sources */,
-				C740FA7F28DD71CA00BA50DB /* MessageThread.swift in Sources */,
+				C740FA7F28DD71CA00BA50DB /* MessagePreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
