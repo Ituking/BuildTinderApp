@@ -35,7 +35,7 @@ struct ChatView: View {
                     }
                 })
                 
-                ZStack {
+                ZStack(alignment: .trailing) {
                     Color.textfieldBG
                     
                     TextField("Type a message", text: $typingMessage)
@@ -43,6 +43,12 @@ struct ChatView: View {
                         .textFieldStyle(PlainTextFieldStyle())
                         .frame(height: 45)
                     .padding(.horizontal)
+                    
+                    Button(action: {}, label: {
+                        Text("Send")
+                    })
+                    .padding(.horizontal)
+                    .foregroundColor(typingMessage.isEmpty ? Color.textPrimary : Color.blue)
                 }
                 .frame(height: 40)
                 .cornerRadius(20)
