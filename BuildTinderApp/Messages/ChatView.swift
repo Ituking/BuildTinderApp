@@ -10,6 +10,8 @@ import SwiftUI
 struct ChatView: View {
     @ObservedObject var chatMng: ChatManager
     
+    @State private var typingMessage: String = ""
+    
     private var person: Person
     
     init(person: Person) {
@@ -18,15 +20,33 @@ struct ChatView: View {
     }
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false, content: {
-            
-            LazyVStack {
-                ForEach(chatMng.messages.indices, id: \.self) { index in
-                    let msg = chatMng.messages[index]
-                    MessageView(message: msg)
-                }
+        ZStack(alignment: .top) {
+            VStack {
+                Spacer()
+                    .frame(height: 60)
+                
+                ScrollView(.vertical, showsIndicators: false, content: {
+                    
+                    LazyVStack {
+                        ForEach(chatMng.messages.indices, id: \.self) { index in
+                            let msg = chatMng.messages[index]
+                            MessageView(message: msg)
+                        }
+                    }
+                })
+                
+                TextField("Type a message", text: $typingMessage)
+                    .foregroundColor(Color.textPrimary)
+                    .textFieldStyle(PlainTextFieldStyle())
             }
-        })
+            
+            ChatViewHeader(
+                name: person.name,
+                imageURL: person.imageURLS.first) {
+//                Video Action
+                }
+
+        }
     }
 }
 
