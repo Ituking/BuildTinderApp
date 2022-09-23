@@ -76,8 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				C740FA8028DD74AE00BA50DB /* MessageView.swift */,
-				C740FA8328DD7A2E00BA50DB /* ChatView.swift */,
 				C740FA8528DD7B1000BA50DB /* ChatManager.swift */,
+				C740FA8328DD7A2E00BA50DB /* ChatView.swift */,
 				C740FA8728DD9BE200BA50DB /* ChatViewHeader.swift */,
 			);
 			path = Messages;
