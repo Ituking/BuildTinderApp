@@ -44,7 +44,7 @@ struct ChatView: View {
                         .frame(height: 45)
                     .padding(.horizontal)
                     
-                    Button(action: {}, label: {
+                    Button(action: { sendMessage() }, label: {
                         Text("Send")
                     })
                     .padding(.horizontal)
@@ -64,9 +64,15 @@ struct ChatView: View {
                 name: person.name,
                 imageURL: person.imageURLS.first) {
 //                Video Action
-                }
-
+            }
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
+    }
+    
+    func sendMessage() {
+        chatMng.sendMessage(Message(content: typingMessage))
+        typingMessage = ""
     }
 }
 
