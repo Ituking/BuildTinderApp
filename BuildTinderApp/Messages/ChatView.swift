@@ -31,6 +31,8 @@ struct ChatView: View {
                         ForEach(chatMng.messages.indices, id: \.self) { index in
                             let msg = chatMng.messages[index]
                             MessageView(message: msg)
+                                .animation(.easeIn)
+                                .transition(.move(edge: .trailing))
                         }
                     }
                 })
