@@ -27,7 +27,11 @@ class ChatManager: ObservableObject {
     
     private let keyboardwillshow = NotificationCenter.default
         .publisher(for: UIResponder.keyboardWillShowNotification)
-        .map(( _ in true ))
+        .map({ _ in true })
+    
+    private let keyboardwillHide = NotificationCenter.default
+        .publisher(for: UIResponder.keyboardWillHideNotification)
+        .map({ _ in false })
     
     private func loadMessages() {
         messages = [Message.exampleSent, Message.exampleReceived]
