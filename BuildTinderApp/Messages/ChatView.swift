@@ -79,8 +79,11 @@ struct ChatView: View {
         .navigationBarHidden(true)
         .onChange(of: chatMng.keyboardIsShowing, perform: { value in
             if value {
-                // Scroll to the bottom
+                scrollToBottom()
             }
+        })
+        .onChange(of: chatMng.messages, perform: { _ in
+            scrollToBottom()
         })
     }
     
