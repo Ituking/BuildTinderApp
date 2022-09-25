@@ -10,7 +10,10 @@ import Combine
 import UIKit
 
 class ChatManager: ObservableObject {
-    @Published var messages : [Message] = []
+    @Published var messages: [Message] = []
+    @Published var keyboardIsShowing: Bool = false
+    
+    var cancellable: AnyCancellable? = nil
     
     private var person: Person
     
@@ -32,6 +35,12 @@ class ChatManager: ObservableObject {
     private let keyboardwillHide = NotificationCenter.default
         .publisher(for: UIResponder.keyboardWillHideNotification)
         .map({ _ in false })
+    
+    private func setupPublishers() {
+        cancellable = Publishers.Merge(keyboardwillshow, keyboardwillHide)
+            .subscribe(on: DispatchQueue.main)
+            .assign(to: \.keyboardIsShowing, on: self)
+    }
     
     private func loadMessages() {
         messages = [Message.exampleSent, Message.exampleReceived]
