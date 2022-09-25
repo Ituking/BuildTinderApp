@@ -45,4 +45,8 @@ class ChatManager: ObservableObject {
     private func loadMessages() {
         messages = [Message.exampleSent, Message.exampleReceived]
     }
+    
+    deinit {
+        cancellable?.cancel()
+    }
 }

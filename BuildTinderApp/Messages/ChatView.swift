@@ -70,6 +70,11 @@ struct ChatView: View {
         }
         .navigationTitle("")
         .navigationBarHidden(true)
+        .onChange(of: chatMng.keyboardIsShowing, perform: { value in
+            if value {
+                // Scroll to the bottom
+            }
+        })
     }
     
     func sendMessage() {
