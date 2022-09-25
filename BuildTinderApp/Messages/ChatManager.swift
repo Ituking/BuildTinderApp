@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Combine
+import UIKit
 
 class ChatManager: ObservableObject {
     @Published var messages : [Message] = []
@@ -22,6 +24,10 @@ class ChatManager: ObservableObject {
         messages.append(message)
         // if networking failure, then show an error with some retry options
     }
+    
+    private let keyboardwillshow = NotificationCenter.default
+        .publisher(for: UIResponder.keyboardWillShowNotification)
+        .map(( _ in true ))
     
     private func loadMessages() {
         messages = [Message.exampleSent, Message.exampleReceived]
