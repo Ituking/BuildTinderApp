@@ -35,6 +35,7 @@ struct ChatView: View {
                             ForEach(chatMng.messages.indices, id: \.self) { index in
                                 let msg = chatMng.messages[index]
                                 MessageView(message: msg)
+                                    .id(index)
                             }
                         }
                         .onAppear(perform: {
@@ -89,7 +90,9 @@ struct ChatView: View {
     }
     
     func scrollToBottom() {
-        scrollProxy?.scrollTo()
+        withAnimation {
+            scrollProxy?.scrollTo(chatMng.messages.count - 1, anchor: .bottom)
+        }
     }
     
 }
