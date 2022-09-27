@@ -10,10 +10,11 @@ import SwiftUI
 struct MessageListView: View {
     @ObservedObject var vm: MessageListVM = MessageListVM()
     
+    @State private var searchText: String = ""
     
     var body: some View {
         VStack {
-            Text("Search bar")
+            TextField("Search Matches", text: $searchText)
             
             Text("Vstack of all of our conversations")
         }
