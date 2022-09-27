@@ -19,6 +19,16 @@ struct MessageListView: View {
                 .padding(.horizontal, 25)
                 .background(Color.textfieldBG)
                 .cornerRadius(8)
+                .overlay(
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.textPrimary)
+                            .font(.system(20))
+                            .fontWeight(.bold)
+                        
+                        Spacer()
+                    }
+                )
             
             Text("Vstack of all of our conversations")
         }
