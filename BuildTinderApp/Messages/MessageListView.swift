@@ -15,6 +15,10 @@ struct MessageListView: View {
     var body: some View {
         VStack {
             TextField("Search Matches", text: $searchText)
+                .padding(7)
+                .padding(.horizontal, 25)
+                .background(Color.textfieldBG)
+                .cornerRadius(8)
             
             Text("Vstack of all of our conversations")
         }
