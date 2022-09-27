@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MessageListView: View {
+    @ObservedObject var vm: MessageListVM = MessageListVM()
+    
+    
     var body: some View {
         VStack {
             Text("Search bar")
