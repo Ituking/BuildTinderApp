@@ -15,4 +15,9 @@ struct MessagePreview: Hashable {
 
 extension MessagePreview {
     static let example = MessagePreview(person: Person.example, lastMessage: "こんにちは。そちらの天気は現在どうなっていますか？")
+    
+    static let examples: [MessagePreview] = [
+        MessagePreview(person: Person.example, lastMessage: "こんにちは。そちらの天気は現在どうなっていますか？"),
+        MessagePreview(person: Person.example2, lastMessage: "何してるの？")
+    ]
 }
