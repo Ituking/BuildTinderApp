@@ -16,7 +16,14 @@ struct LikesView: View {
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false, content: {
-            Text("Placeholder")
+            Text("Upgrade to Gold to see people who already liked you.")
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .foregroundColor(.textTitle)
+                .font(.system(size: 16))
+                .fontWeight(.medium)
+                .padding(.horizontal, 40)
+                .padding(.vertical, 24)
         })
     }
 }
