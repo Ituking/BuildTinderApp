@@ -11,26 +11,34 @@ struct MessageListView: View {
     @ObservedObject var vm: MessageListVM = MessageListVM()
     
     @State private var searchText: String = ""
+    @State private var isEditing: Bool = false
     
     var body: some View {
         VStack {
-            TextField("Search Matches", text: $searchText)
-                .padding(7)
-                .padding(.horizontal, 25)
-                .background(Color.textfieldBG)
-                .cornerRadius(8)
-                .overlay(
-                    HStack {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(.textPrimary)
-                            .font(.system(size: 20))
-                            .fontWeight(.bold)
-                            .padding(.leading, 4)
-                        
-                        Spacer()
-                    }
-                )
+            HStack {
+                TextField("Search Matches", text: $searchText)
+                    .padding(7)
+                    .padding(.horizontal, 25)
+                    .background(Color.textfieldBG)
+                    .cornerRadius(8)
+                    .overlay(
+                        HStack {
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(.textPrimary)
+                                .font(.system(size: 20))
+                                .fontWeight(.bold)
+                                .padding(.leading, 4)
+                            
+                            Spacer()
+                        }
+                    )
                 .padding(.horizontal, 10)
+                
+                Button(action: {}, label: {
+                    Text("Cancel")
+                })
+                .padding(.trailing, 10)
+            }
             
             Text("Vstack of all of our conversations")
             
