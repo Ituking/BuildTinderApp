@@ -57,7 +57,7 @@ struct MessageListView: View {
                     .frame(height: 14)
                 
                 VStack {
-                    ForEach(vm.messagePreviews, id: \.self) { preview in
+                    ForEach(vm.messagePreviews.filter({ displayPreview($0) }), id: \.self) { preview in
                         
                         NavigationLink(
                             destination: ChatView(person: preview.person),
@@ -73,6 +73,26 @@ struct MessageListView: View {
             }
         }
         .modifier(HideNavigationView())
+    }
+    
+    func displayPreview(_ preview: MessagePreview) -> Bool {
+        // person name
+        if preview.person.name.contains(searchText) {
+            return true
+        }
+        
+        // last message sent
+        if preview.lastMessage.contains(searchText) {
+            return true
+        }
+        
+        // person bio
+        if preview.person.bio.contains(searchText) {
+            return true
+        }
+        
+        return false
+        
     }
 }
 
