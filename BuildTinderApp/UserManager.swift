@@ -9,13 +9,13 @@ import Foundation
 
 class UserManager: ObservableObject {
     
-    @Published var currentUser: User = User[name: ""]
+    @Published var currentUser: User = User(name: "")
     
     init() {
         loadUser()
     }
     
-    func loadUser() {
+    private func loadUser() {
         self.currentUser = User.example
     }
 }
