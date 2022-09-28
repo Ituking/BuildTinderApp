@@ -18,6 +18,7 @@ extension MessagePreview {
     
     static let examples: [MessagePreview] = [
         MessagePreview(person: Person.example, lastMessage: "Hello. I am 22 years old."),
-        MessagePreview(person: Person.example2, lastMessage: "What are you doing?")
+        MessagePreview(person: Person.example2, lastMessage: "I wanna go to Shinjyuku."),
+        MessagePreview(person: Person.example3, lastMessage: "What are you doing?")
     ]
 }
