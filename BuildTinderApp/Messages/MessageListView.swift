@@ -56,19 +56,24 @@ struct MessageListView: View {
                 Spacer()
                     .frame(height: 14)
                 
-                VStack {
-                    ForEach(vm.messagePreviews.filter({ searchText.isEmpty ?
-                        true : displayPreview($0)
-                    }), id: \.self) { preview in
-                        
-                        NavigationLink(
-                            destination: ChatView(person: preview.person),
-                            label: {
-                                MesssageRowView(preview: preview)
-                            })
-                        .buttonStyle(PlainButtonStyle())
-                        .animation(.easeIn(duration: 0.25))
-                        .transition(.slide)
+                ZStack {
+                    VStack {
+                        ForEach(vm.messagePreviews.filter({ searchText.isEmpty ?
+                            true : displayPreview($0)
+                        }), id: \.self) { preview in
+                            
+                            NavigationLink(
+                                destination: ChatView(person: preview.person),
+                                label: {
+                                    MesssageRowView(preview: preview)
+                                })
+                            .buttonStyle(PlainButtonStyle())
+                            .animation(.easeIn(duration: 0.25))
+                            .transition(.slide)
+                        }
+                    }
+                    if isEditing && searchText.isEmpty {
+                        Color.white.opacity(0.5)
                     }
                 }
                 
