@@ -19,5 +19,5 @@ struct Message: Hashable {
 
 extension Message {
     static let exampleSent = Message(content: "Hello.")
-    static let exampleReceived = Message(content: "Hello. I am 22 years old.", person: Person.example)
+    static let exampleReceived = Message(content: "Hello.", person: Person.example)
 }

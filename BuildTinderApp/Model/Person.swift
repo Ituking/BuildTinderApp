@@ -25,4 +25,9 @@ extension Person {
         imageURLS: [URL(string: "https://picsum.photos/400/301")!],
         bio: "I wanna go to Shinjyuku."
     )
+    static let example3 = Person(
+        name: "Memi",
+        imageURLS: [URL(string: "https://picsum.photos/400/302")!],
+        bio: "What are you doing?."
+    )
 }

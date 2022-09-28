@@ -57,15 +57,18 @@ struct MessageListView: View {
                     .frame(height: 14)
                 
                 VStack {
-                    ForEach(vm.messagePreviews.filter({ displayPreview($0) }), id: \.self) { preview in
+                    ForEach(vm.messagePreviews.filter({ searchText.isEmpty ?
+                        true : displayPreview($0)
+                    }), id: \.self) { preview in
                         
                         NavigationLink(
                             destination: ChatView(person: preview.person),
                             label: {
                                 MesssageRowView(preview: preview)
-                                
                             })
                         .buttonStyle(PlainButtonStyle())
+                        .animation(.easeIn(duration: 0.25))
+                        .transition(.slide)
                     }
                 }
                 
