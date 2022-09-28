@@ -16,6 +16,15 @@ struct MesssageRowView: View {
             RoundedImage(url: preview.person.imageURLS.first)
                 .frame(height: 90)
             
+            VStack(alignment: .leading, spacing: 10) {
+                Text(preview.person.name)
+                    .font(.system(size: 21))
+                    .fontWeight(.semibold)
+                
+                Text(preview.lastMessage)
+                    .foregroundColor(.textPrimary)
+            }
+            
             Spacer()
         }
     }
