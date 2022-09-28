@@ -23,6 +23,7 @@ struct MesssageRowView: View {
                 
                 Text(preview.lastMessage)
                     .foregroundColor(.textPrimary)
+                    .lineLimit(1)
             }
             
             Spacer()

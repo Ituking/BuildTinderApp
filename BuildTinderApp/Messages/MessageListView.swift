@@ -52,6 +52,12 @@ struct MessageListView: View {
                 }
             }
             
+            VStack {
+                ForEach(vm.messagePreviews, id: \.self) { preview in
+                    MesssageRowView(preview: preview)
+                }
+            }
+            
             Spacer()
         }
     }
