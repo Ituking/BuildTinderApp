@@ -23,14 +23,18 @@ struct MessageListView: View {
                     HStack {
                         Image(systemName: "magnifyingglass")
                             .foregroundColor(.textPrimary)
-                            .font(.system(20))
+                            .font(.system(size: 20))
                             .fontWeight(.bold)
+                            .padding(.leading, 4)
                         
                         Spacer()
                     }
                 )
+                .padding(.horizontal, 10)
             
             Text("Vstack of all of our conversations")
+            
+            Spacer()
         }
     }
 }
