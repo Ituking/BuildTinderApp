@@ -42,6 +42,7 @@ struct MessageListView: View {
                     Button(action: {
                         self.isEditing = false
                         self.searchText = ""
+                        self.endEditing(true)
                     }, label: {
                         Text("Cancel")
                     })
