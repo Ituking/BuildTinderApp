@@ -33,14 +33,21 @@ struct MessageListView: View {
                         }
                     )
                 .padding(.horizontal, 10)
+                .onTapGesture {
+                    self.isEditing = true
+                }
                 
-                Button(action: {}, label: {
-                    Text("Cancel")
-                })
-                .padding(.trailing, 10)
+                if isEditing {
+                    Button(action: {
+                        self.isEditing = false
+                        self.searchText = ""
+                    }, label: {
+                        Text("Cancel")
+                    })
+                    .padding(.trailing, 10)
+                    .transition(.move(edge: .trailing))
+                }
             }
-            
-            Text("Vstack of all of our conversations")
             
             Spacer()
         }
