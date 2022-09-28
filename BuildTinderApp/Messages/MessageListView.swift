@@ -36,6 +36,7 @@ struct MessageListView: View {
                 .onTapGesture {
                     self.isEditing = true
                 }
+                .animation(.easeIn(duration: 0.25))
                 
                 if isEditing {
                     Button(action: {
@@ -46,6 +47,7 @@ struct MessageListView: View {
                     })
                     .padding(.trailing, 10)
                     .transition(.move(edge: .trailing))
+                    .animation(.easeIn(duration: 0.25))
                 }
             }
             
