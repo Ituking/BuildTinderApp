@@ -13,10 +13,19 @@ struct PersonSquare: View {
     var blue: Bool
     
     var body: some View {
-        KFImage(person.imageURLS.first)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
+        ZStack(alignment: .bottomLeading) {
+            KFImage(person.imageURLS.first)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
             .frame(height: 240)
+            
+            Text("\(person.name), \(person.age)")
+                .padding()
+                .foregroundColor(.white)
+                .font(.system(size: 18))
+                .fontWeight(.semibold)
+        }
+        .cornerRadius(16)
     }
 }
 
