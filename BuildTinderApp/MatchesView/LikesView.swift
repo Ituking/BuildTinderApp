@@ -38,11 +38,22 @@ struct LikesView: View {
                     ForEach(userMng.matches) { person in
                         PersonSquare(person: person, blur: !user.goldSubscriber)
                             .frame(height:240)
+                            .onTapGesture {
+                                personTapped(person)
+                            }
                     }
                 })
                 .padding(.horizontal, 6)
 
         })
+    }
+    
+    func personTapped(_ person: Person) {
+        if user.goldSubscriber {
+            appState.showPersonsProfile(person)
+        } else {
+            appState.showPurchaseScreen()
+        }
     }
 }
 
@@ -50,5 +61,6 @@ struct LikesView_Previews: PreviewProvider {
     static var previews: some View {
         LikesView()
             .environmentObject(UserManager())
+            .environmentObject(AppStateManager())
     }
 }
