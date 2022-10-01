@@ -37,6 +37,7 @@ struct LikesView: View {
                 content: {
                     ForEach(userMng.matches) { person in
                         PersonSquare(person: person, blur: !user.goldSubscriber)
+                            .frame(height:240)
                     }
                 })
                 .padding(.horizontal, 6)
