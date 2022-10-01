@@ -8,7 +8,9 @@
 import Foundation
 
 
-struct Person: Hashable {
+struct Person: Hashable, Identifiable {
+    let id = UUID().uuidString
+    
     var name: String
     var imageURLS: [URL]
     var bio: String
