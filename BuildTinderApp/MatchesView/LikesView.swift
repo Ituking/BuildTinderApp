@@ -36,7 +36,7 @@ struct LikesView: View {
                 pinnedViews: [],
                 content: {
                     ForEach(userMng.matches) { person in
-                        PersonSquare(person: person, blur: user.goldSubscriber)
+                        PersonSquare(person: person, blur: !user.goldSubscriber)
                     }
                 })
                 .padding(.horizontal, 6)
