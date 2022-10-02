@@ -11,8 +11,10 @@ struct User {
     var name: String
     
     var goldSubscriber: Bool = false
+    
+    var imageURLs: [URL] = []
 }
 
 extension User {
-    static let example = User(name: "大久保", goldSubscriber: false)
+    static let example = User(name: "大久保", goldSubscriber: false, imageURLs: [URL(string: "https://picsum.photos/400/310")!])
 }

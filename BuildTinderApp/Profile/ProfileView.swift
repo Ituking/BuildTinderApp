@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var userMng: UserManager
+    
+    var user: User {
+        return userMng.currentUser
+    }
+    
     var body: some View {
         VStack(spacing: 0) {
             ZStack(alignment: .topTrailing) {
-                RoundedImage(url: URL(string: "https://picsum.photos/400"))
+                RoundedImage(url: user.imageURLs.first)
                     .frame(height: 175)
                 
                 Button(action: {}, label: {
@@ -146,5 +152,6 @@ struct ProfileView: View {
         static var previews: some View {
             ProfileView()
                 .background(Color.defaultBackground)
+                .environmentObject(UserManager())
         }
     }
