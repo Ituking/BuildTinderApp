@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MatchesView: View {
     
+    @EnvironmentObject var userMng: UserManager
+    
     @State private var selectedTab: LikedTab = .likes
     
     enum LikedTab {
@@ -17,12 +19,22 @@ struct MatchesView: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Button(action: {}, label: {
+                    Text("\(userMng.matches.count) Likes")
+                })
+                .buttonStyle(PlainButtonStyle())
+            }
+            
+            Spacer()
+        }
     }
 }
 
 struct MatchesView_Previews: PreviewProvider {
     static var previews: some View {
         MatchesView()
+            .environmentObject(UserManager())
     }
 }
