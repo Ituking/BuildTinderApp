@@ -36,7 +36,7 @@ struct TopPicksView: View {
                 pinnedViews: [],
                 content: {
                     ForEach(userMng.matches) { person in
-                        PersonSquare(person: person, blur: !user.goldSubscriber)
+                        PersonSquare(person: person, blur: false)
                             .frame(height:240)
                             .onTapGesture {
                                 personTapped(person)

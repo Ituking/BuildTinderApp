@@ -10,6 +10,7 @@ import SwiftUI
 struct MatchesView: View {
     
     @EnvironmentObject var userMng: UserManager
+    @EnvironmentObject var appState: AppStateManager
     
     @State private var selectedTab: LikedTab = .likes
     
@@ -24,6 +25,10 @@ struct MatchesView: View {
         } else {
             return "UNLOCK TOP PICKS"
         }
+    }
+    
+    private func buttonAction() {
+        appState.showPurchaseScreen()
     }
     
     var body: some View {
@@ -89,5 +94,6 @@ struct MatchesView_Previews: PreviewProvider {
     static var previews: some View {
         MatchesView()
             .environmentObject(UserManager())
+            .environmentObject(AppStateManager())
     }
 }
