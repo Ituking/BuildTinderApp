@@ -81,7 +81,7 @@ struct MatchesView: View {
                     .font(.system(size: 22))
                     .fontWeight(.bold)
                     .foregroundColor(.white)
-                    .background(Color.pink)
+                    .background(Color.yellow)
                     .cornerRadius(30)
             })
             .buttonStyle(PlainButtonStyle())
