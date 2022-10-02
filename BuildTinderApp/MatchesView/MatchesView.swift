@@ -67,8 +67,12 @@ struct MatchesView: View {
                     .padding(.horizontal, 36)
                     .font(.system(size: 22))
                     .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .background(Color.pink)
+                    .cornerRadius(30)
             })
             .buttonStyle(PlainButtonStyle())
+            .padding(.bottom, 40)
         }
     }
 }
