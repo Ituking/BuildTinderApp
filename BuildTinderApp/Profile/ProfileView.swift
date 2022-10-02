@@ -38,14 +38,14 @@ struct ProfileView: View {
             
             // Name + Job Title
             Group {
-                Text("大久保, 23")
+                Text("\(user.name), \(user.age)")
                     .foregroundColor(.textTitle)
                     .font(.system(size: 26))
                     .fontWeight(.medium)
                 
                 Spacer().frame(height: 8)
                 
-                Text("Software Engineer")
+                Text("\(user.jobTitle)")
                 
                 Spacer().frame(height: 22)
             }
@@ -113,27 +113,29 @@ struct ProfileView: View {
             
             Spacer().frame(height: 13)
             
-            HStack {
-                Text("Photo Tip: Make waves with a beach photo and get more likes")
-                    .multilineTextAlignment(.leading)
-                    .lineLimit(3)
-                    .foregroundColor(.white)
-                    .font(.system(size: 14))
-                
-                Button(action: {}, label: {
-                    Image(systemName: "plus")
-                        .font(.system(size: 12))
-                        .fontWeight(.heavy)
-                        .foregroundColor(.pink)
-                        .padding(6)
-                })
-                .background(Color.white)
-                .clipShape(Circle())
-            }
-            .padding()
-            .background(Color.pink)
-            .cornerRadius(12)
+            if !user.profileTip.isEmpty {
+                HStack {
+                    Text("\(user.profileTip)")
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(3)
+                        .foregroundColor(.white)
+                        .font(.system(size: 14))
+                    
+                    Button(action: {}, label: {
+                        Image(systemName: "plus")
+                            .font(.system(size: 12))
+                            .fontWeight(.heavy)
+                            .foregroundColor(.pink)
+                            .padding(6)
+                    })
+                    .background(Color.white)
+                    .clipShape(Circle())
+                }
+                .padding()
+                .background(Color.pink)
+                .cornerRadius(12)
             .padding(.horizontal, 8)
+            }
             
             ZStack {
                 Color.gray.opacity(0.15)

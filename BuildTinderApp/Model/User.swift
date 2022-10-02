@@ -9,12 +9,22 @@ import Foundation
 
 struct User {
     var name: String
+    var age: Int
+    var jobTitle: String
     
     var goldSubscriber: Bool = false
+    var profileTip: String = ""
     
     var imageURLs: [URL] = []
 }
 
 extension User {
-    static let example = User(name: "大久保", goldSubscriber: false, imageURLs: [URL(string: "https://picsum.photos/400/310")!])
+    static let example = User(
+        name: "大久保",
+        age: 23,
+        jobTitle: "Software Engineer",
+        goldSubscriber: false,
+        profileTip: "Photo Tip: Make waves with a beach photo and get more likes",
+        imageURLs: [URL(string: "https://picsum.photos/400/310")!]
+    )
 }
