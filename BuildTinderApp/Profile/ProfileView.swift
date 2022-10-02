@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @EnvironmentObject var userMng: UserManager
+    @EnvironmentObject var appState: AppStateManager
     
     var user: User {
         return userMng.currentUser
@@ -142,7 +143,7 @@ struct ProfileView: View {
                     Color.gray.opacity(0.15)
                     
                     ProfileSwipePromo {
-                        //
+                        appState.showPurchaseScreen()
                     }
                 }
                 .padding(.top, 18)
@@ -159,5 +160,6 @@ struct ProfileView: View {
             ProfileView()
                 .background(Color.defaultBackground)
                 .environmentObject(UserManager())
+                .environmentObject(AppStateManager())
         }
     }
