@@ -20,7 +20,7 @@ struct User {
 
 extension User {
     static let example = User(
-        name: "大久保",
+        name: "Itsuki",
         age: 23,
         jobTitle: "Software Engineer",
         goldSubscriber: false,
