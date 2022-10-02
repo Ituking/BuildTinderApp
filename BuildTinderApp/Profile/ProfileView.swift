@@ -137,14 +137,18 @@ struct ProfileView: View {
             .padding(.horizontal, 8)
             }
             
-            ZStack {
-                Color.gray.opacity(0.15)
-                
-                ProfileSwipePromo {
-                    //
+            if !user.goldSubscriber {
+                ZStack {
+                    Color.gray.opacity(0.15)
+                    
+                    ProfileSwipePromo {
+                        //
+                    }
                 }
+                .padding(.top, 18)
             }
-            .padding(.top, 18)
+            
+            Spacer()
         }
         .foregroundColor(Color.black.opacity(0.75))
     }
