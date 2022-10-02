@@ -19,7 +19,7 @@ struct MatchesView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             HStack {
                 Spacer()
                 
@@ -27,6 +27,9 @@ struct MatchesView: View {
                     Text("\(userMng.matches.count) Likes")
                         .font(.system(size: 22))
                         .fontWeight(.semibold)
+                        .if(selectedTab == .topPicks) {
+                            $0.foregroundColor(.textPrimary)
+                        }
                 })
                 .buttonStyle(PlainButtonStyle())
                 
@@ -36,10 +39,22 @@ struct MatchesView: View {
                     Text("\(userMng.topPicks.count) Top Picks")
                         .font(.system(size: 22))
                         .fontWeight(.semibold)
+                        .if(selectedTab == .likes) {
+                            $0.foregroundColor(.textPrimary)
+                        }
                 })
                 .buttonStyle(PlainButtonStyle())
                 
                 Spacer()
+            }
+            
+            Divider()
+                .padding(.vertical, 14)
+            
+            if selectedTab == .likes {
+                LikesView()
+            } else {
+                TopPicksView()
             }
             
             Spacer()
