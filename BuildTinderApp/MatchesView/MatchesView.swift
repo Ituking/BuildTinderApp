@@ -18,6 +18,14 @@ struct MatchesView: View {
         case topPicks
     }
     
+    private var buttonText: String {
+        if selectedTab == .likes {
+            return " SEE WHO LIKES YOU"
+        } else {
+            return "UNLOCK TOP PICKS"
+        }
+    }
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack(spacing: 0) {
@@ -62,7 +70,7 @@ struct MatchesView: View {
             }
             
             Button(action: {}, label: {
-                Text("See who likes you")
+                Text(buttonText)
                     .padding(.vertical, 14)
                     .padding(.horizontal, 36)
                     .font(.system(size: 22))
