@@ -19,45 +19,56 @@ struct MatchesView: View {
     }
     
     var body: some View {
-        VStack(spacing: 0) {
-            HStack {
-                Spacer()
+        ZStack(alignment: .bottom) {
+            VStack(spacing: 0) {
+                HStack {
+                    Spacer()
+                    
+                    Button(action: { selectedTab = .likes }, label: {
+                        Text("\(userMng.matches.count) Likes")
+                            .font(.system(size: 22))
+                            .fontWeight(.semibold)
+                            .if(selectedTab == .topPicks) {
+                                $0.foregroundColor(.textPrimary)
+                            }
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                    
+                    Spacer()
+                    
+                    Button(action: { selectedTab = .topPicks }, label: {
+                        Text("\(userMng.topPicks.count) Top Picks")
+                            .font(.system(size: 22))
+                            .fontWeight(.semibold)
+                            .if(selectedTab == .likes) {
+                                $0.foregroundColor(.textPrimary)
+                            }
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                    
+                    Spacer()
+                }
                 
-                Button(action: { selectedTab = .likes }, label: {
-                    Text("\(userMng.matches.count) Likes")
-                        .font(.system(size: 22))
-                        .fontWeight(.semibold)
-                        .if(selectedTab == .topPicks) {
-                            $0.foregroundColor(.textPrimary)
-                        }
-                })
-                .buttonStyle(PlainButtonStyle())
+                Divider()
+                    .padding(.vertical, 14)
                 
-                Spacer()
-                
-                Button(action: { selectedTab = .topPicks }, label: {
-                    Text("\(userMng.topPicks.count) Top Picks")
-                        .font(.system(size: 22))
-                        .fontWeight(.semibold)
-                        .if(selectedTab == .likes) {
-                            $0.foregroundColor(.textPrimary)
-                        }
-                })
-                .buttonStyle(PlainButtonStyle())
+                if selectedTab == .likes {
+                    LikesView()
+                } else {
+                    TopPicksView()
+                }
                 
                 Spacer()
             }
             
-            Divider()
-                .padding(.vertical, 14)
-            
-            if selectedTab == .likes {
-                LikesView()
-            } else {
-                TopPicksView()
-            }
-            
-            Spacer()
+            Button(action: {}, label: {
+                Text("See who likes you")
+                    .padding(.vertical, 14)
+                    .padding(.horizontal, 36)
+                    .font(.system(size: 22))
+                    .fontWeight(.bold)
+            })
+            .buttonStyle(PlainButtonStyle())
         }
     }
 }
