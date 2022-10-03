@@ -50,15 +50,24 @@ struct PurchaseOptionView: View {
                 .font(.system(size: 20))
                 .fontWeight(.bold)
         }
+        .if(!isSelected) {
+            $0.foregroundColor(Color.textPrimary)
+        }
+        .if(isSelected) {
+            $0.overlay(
+                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    .stroke(Color.yellow, lineWidth: 1.5)
+            )
+        }
     }
 }
 
 struct PurchaseOptionView_Previews: PreviewProvider {
     static var previews: some View {
-        let isSelected = true
-        
-        PurchaseOptionView(sub: Subscription.example1, isSelected: isSelected)
-        PurchaseOptionView(sub: Subscription.example2, isSelected: isSelected)
-        PurchaseOptionView(sub: Subscription.example3, isSelected: isSelected)
+        HStack {
+            PurchaseOptionView(sub: Subscription.example1, isSelected: false)
+            PurchaseOptionView(sub: Subscription.example2, isSelected: true)
+            PurchaseOptionView(sub: Subscription.example3, isSelected: false)
+        }
     }
 }
