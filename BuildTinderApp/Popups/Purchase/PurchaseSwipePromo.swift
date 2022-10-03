@@ -10,8 +10,13 @@ import SwiftUI
 struct PurchaseSwipePromo: View {
     var body: some View {
         TabView {
-            Text("TEST")
-            Text("TEST")
+            VStack(spacing: 10) {
+                Image(systemName: "thermometer.sun.fill")
+                    .renderingMode(.original)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 75)
+            }
         }
         .tabViewStyle(PageTabViewStyle())
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
