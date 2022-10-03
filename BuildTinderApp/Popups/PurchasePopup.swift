@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PurchasePopup: View {
+    
+    let screen = UIScreen.main.bounds
+    
     var body: some View {
         GeometryReader { geo in
             VStack {
@@ -23,6 +26,15 @@ struct PurchasePopup: View {
                 Text("3 purchase Options")
                 
                 Text("Continue")
+                
+                Button(action: {}, label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 45)
+                        
+                        Text("CONTINUE")
+                            .foregroundColor(.white)
+                    }
+                })
                 
                 Text("No Thanks")
                 
