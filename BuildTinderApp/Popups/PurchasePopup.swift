@@ -32,13 +32,20 @@ struct PurchasePopup: View {
                         
                         Text("CONTINUE")
                             .foregroundColor(.white)
+                            .font(.system(size: 20))
+                            .fontWeight(.heavy)
                     }
                 })
                 .frame(height: 55)
                 .padding(.horizontal, 24)
                 .padding(.top, 12)
                 
-                Text("No Thanks")
+                Button(action: {}, label: {
+                    Text("No Thanks")
+                        .foregroundColor(.textPrimary)
+                        .font(.system(size: 20))
+                        .fontWeight(.heavy)
+                })
                 
                 Spacer()
             }
