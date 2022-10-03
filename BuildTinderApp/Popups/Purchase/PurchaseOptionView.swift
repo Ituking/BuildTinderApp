@@ -30,6 +30,20 @@ struct PurchaseOptionView: View {
                 .frame(height: 2)
             
             Text("$\(String(format: "%.2f", sub.monthlyCost))/mo")
+                .foregroundColor(.textPrimary)
+            
+            Spacer()
+                .frame(height: 2)
+            
+            if sub.savePercent != nil {
+                Text("\(sub.savePercent ?? 0)%")
+                    .foregroundColor(.yellow)
+                    .font(.system(size: 16))
+                    .fontWeight(.heavy)
+                    .frame(height: 22)
+            } else {
+                
+            }
         }
     }
 }
