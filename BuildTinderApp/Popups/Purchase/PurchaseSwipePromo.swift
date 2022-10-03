@@ -16,6 +16,12 @@ struct PurchaseSwipePromo: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(height: 75)
+                
+                Text("25 people already like you!")
+                    .font(.system(size: 18))
+                    .fontWeight(.semibold)
+                
+                Text("Match with them instantly")
             }
         }
         .tabViewStyle(PageTabViewStyle())
