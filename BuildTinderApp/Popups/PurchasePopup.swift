@@ -11,6 +11,9 @@ struct PurchasePopup: View {
     var body: some View {
         VStack {
             Text("Get Tinder Gold")
+                .foregroundColor(.yellow)
+                .font(.system(size: 24))
+                .fontWeight(.bold)
             
             Text("PurchaseSwipePromo")
             
@@ -19,6 +22,8 @@ struct PurchasePopup: View {
             Text("Continue")
             
             Text("No Thanks")
+            
+            Spacer()
         }
     }
 }
