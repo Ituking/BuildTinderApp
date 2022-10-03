@@ -9,21 +9,26 @@ import SwiftUI
 
 struct PurchasePopup: View {
     var body: some View {
-        VStack {
-            Text("Get Tinder Gold")
-                .foregroundColor(.yellow)
-                .font(.system(size: 24))
-                .fontWeight(.bold)
-            
-            Text("PurchaseSwipePromo")
-            
-            Text("3 purchase Options")
-            
-            Text("Continue")
-            
-            Text("No Thanks")
-            
-            Spacer()
+        GeometryReader { geo in
+            VStack {
+                Text("Get Tinder Gold")
+                    .foregroundColor(.yellow)
+                    .font(.system(size: 24))
+                    .fontWeight(.bold)
+                
+                Text("PurchaseSwipePromo")
+                    .frame(height: 300)
+                    .background(Color.gray)
+                
+                Text("3 purchase Options")
+                
+                Text("Continue")
+                
+                Text("No Thanks")
+                
+                Spacer()
+            }
+            .frame(width: geo.size.width)
         }
     }
 }
