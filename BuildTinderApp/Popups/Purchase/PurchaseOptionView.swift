@@ -29,7 +29,7 @@ struct PurchaseOptionView: View {
             Spacer()
                 .frame(height: 2)
             
-            Text("$\(String(format: "N.2f", sub.monthlyCost))/mo")
+            Text("$\(String(format: "%.2f", sub.monthlyCost))/mo")
         }
     }
 }
