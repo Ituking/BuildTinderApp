@@ -25,16 +25,18 @@ struct PurchasePopup: View {
                 
                 Text("3 purchase Options")
                 
-                Text("Continue")
-                
                 Button(action: {}, label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 45)
+                            .foregroundColor(.yellow)
                         
                         Text("CONTINUE")
                             .foregroundColor(.white)
                     }
                 })
+                .frame(height: 55)
+                .padding(.horizontal, 24)
+                .padding(.top, 12)
                 
                 Text("No Thanks")
                 
