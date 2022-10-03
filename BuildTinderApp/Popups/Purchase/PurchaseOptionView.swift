@@ -42,8 +42,13 @@ struct PurchaseOptionView: View {
                     .fontWeight(.heavy)
                     .frame(height: 22)
             } else {
-                
+                Spacer()
+                    .frame(height: 22)
             }
+            
+            Text("$\(String(format: "%.2f", sub.totalCost))/mo")
+                .font(.system(size: 20))
+                .fontWeight(.bold)
         }
     }
 }
