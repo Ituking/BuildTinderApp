@@ -29,7 +29,7 @@ struct PurchasePopup: View {
                         .font(.system(size: 24))
                         .fontWeight(.bold)
                     
-                    Text("PurchaseSwipePromo")
+                    PurchaseSwipePromo()
                         .frame(height: geo.size.height / 3)
                         .background(Color.gray)
                     

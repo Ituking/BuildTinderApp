@@ -23,6 +23,34 @@ struct PurchaseSwipePromo: View {
                 
                 Text("Match with them instantly")
             }
+            
+            VStack(spacing: 10) {
+                Image(systemName: "paperplane.circle.fill")
+                    .renderingMode(.original)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 75)
+                
+                Text("25 people already like you!")
+                    .font(.system(size: 18))
+                    .fontWeight(.semibold)
+                
+                Text("Match with them instantly")
+            }
+            
+            VStack(spacing: 10) {
+                Image(systemName: "calendar.badge.plus")
+                    .renderingMode(.original)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 75)
+                
+                Text("25 people already like you!")
+                    .font(.system(size: 18))
+                    .fontWeight(.semibold)
+                
+                Text("Match with them instantly")
+            }
         }
         .tabViewStyle(PageTabViewStyle())
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
