@@ -60,11 +60,25 @@ struct PurchasePopup: View {
                         .foregroundColor(.white)
             )
                 
-                VStack {
+                Spacer()
+                
+                VStack(spacing: 4) {
                     Text("Recurring billing, cancel anytime.")
+                        .foregroundColor(.white)
+                        .font(.system(size: 14))
+                        .fontWeight(.semibold)
                     Text("This is a bunch of example text is representing the legal text found on all subscription pages. Out of respect to the original application we will not be copying over their legal text word for word here.")
+                        .foregroundColor(.white.opacity(0.5))
+                        .font(.system(size: 14))
+                        .fontWeight(.semibold)
+                        .multilineTextAlignment(.center)
                 }
+                .padding(.bottom, 20)
+                .padding(.horizontal, 4)
+                
+                Spacer()
             }
+            .background(Color.black.edgesIgnoringSafeArea(.all))
         }
     }
 }
