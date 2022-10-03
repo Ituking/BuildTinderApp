@@ -11,45 +11,60 @@ struct PurchasePopup: View {
     
     let screen = UIScreen.main.bounds
     
+    func processPayment() {
+        
+    }
+    
     var body: some View {
         GeometryReader { geo in
             VStack {
-                Text("Get Tinder Gold")
-                    .foregroundColor(.yellow)
-                    .font(.system(size: 24))
-                    .fontWeight(.bold)
-                
-                Text("PurchaseSwipePromo")
-                    .frame(height: geo.size.height / 3)
-                    .background(Color.gray)
-                
-                Text("3 purchase Options")
-                
-                Button(action: {}, label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 45)
-                            .foregroundColor(.yellow)
-                        
-                        Text("CONTINUE")
-                            .foregroundColor(.white)
+                VStack {
+                    Text("Get Tinder Gold")
+                        .foregroundColor(.yellow)
+                        .font(.system(size: 24))
+                        .fontWeight(.bold)
+                    
+                    Text("PurchaseSwipePromo")
+                        .frame(height: geo.size.height / 3)
+                        .background(Color.gray)
+                    
+                    Text("3 purchase Options")
+                    
+                    Button(action: { processPayment() }, label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 45)
+                                .foregroundColor(.yellow)
+                            
+                            Text("CONTINUE")
+                                .foregroundColor(.white)
+                                .font(.system(size: 20))
+                                .fontWeight(.heavy)
+                        }
+                    })
+                    .frame(height: 55)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 12)
+                    
+                    Button(action: {}, label: {
+                        Text("No Thanks")
+                            .foregroundColor(.textPrimary)
                             .font(.system(size: 20))
                             .fontWeight(.heavy)
-                    }
-                })
-                .frame(height: 55)
-                .padding(.horizontal, 24)
-                .padding(.top, 12)
+                    })
+                    
+                    Spacer()
+                }
+                .frame(width: geo.size.width)
+                .background(
+                    RoundedRectangle(cornerRadius: 25, style: .continuous)
+                        .foregroundColor(.white)
+            )
                 
-                Button(action: {}, label: {
-                    Text("No Thanks")
-                        .foregroundColor(.textPrimary)
-                        .font(.system(size: 20))
-                        .fontWeight(.heavy)
-                })
-                
-                Spacer()
+                VStack {
+                    Text("Recurring billing, cancel anytime.")
+                    Text("This is a bunch of example text is representing the legal text found on all subscription pages. Out of respect to the original application we will not be copying over their legal text word for word here.")
+                }
             }
-            .frame(width: geo.size.width)
         }
     }
 }
