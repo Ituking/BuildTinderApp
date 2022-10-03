@@ -50,10 +50,12 @@ struct PurchaseOptionView: View {
                 .font(.system(size: 20))
                 .fontWeight(.bold)
         }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 18)
         .if(!isSelected) {
             $0.foregroundColor(Color.textPrimary)
         }
-        .if(isSelected) {
+        .if(isSelected && sub.tagLine == .none) {
             $0.overlay(
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                     .stroke(Color.yellow, lineWidth: 1.5)
