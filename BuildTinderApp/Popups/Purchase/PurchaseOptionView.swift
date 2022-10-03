@@ -14,6 +14,22 @@ struct PurchaseOptionView: View {
     var body: some View {
         VStack(spacing: 0) {
             Text("\(sub.month)")
+                .font(.system(size: 44))
+                .fontWeight(.light)
+            
+            Spacer()
+                .frame(height: 2)
+            
+            Text("month\(sub.month > 1 ? "s" : "")")
+                .if(isSelected) {
+                    $0.font(.system(size: 14))
+                        .fontWeight(.bold)
+                }
+            
+            Spacer()
+                .frame(height: 2)
+            
+            Text("$\(String(format: "N.2f", sub.monthlyCost))/mo")
         }
     }
 }
