@@ -61,6 +61,24 @@ struct PurchaseOptionView: View {
                     .stroke(Color.yellow, lineWidth: 1.5)
             )
         }
+        .if(isSelected && sub.tagLine != .none) {
+            $0.overlay(
+                ZStack(alignment: .top) {
+                    Rectangle()
+                        .foregroundColor(.yellow)
+                        .frame(height: 20)
+                    
+                    Text(sub.tagLine.rawValue)
+                        .font(.system(size: 12))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .lineLimit(1)
+                        .padding(.top, 2)
+                        .padding(.horizontal, 6)
+                        .minimumScaleFactor(0.1)
+                }
+            )
+        }
     }
 }
 
