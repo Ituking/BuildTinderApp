@@ -67,6 +67,7 @@ struct PurchaseOptionView: View {
                     Rectangle()
                         .foregroundColor(.yellow)
                         .frame(height: 20)
+                        .cornerRadius(10, corners: [.topLeft, .topRight])
                     
                     Text(sub.tagLine.rawValue)
                         .font(.system(size: 12))
@@ -88,9 +89,9 @@ struct PurchaseOptionView: View {
 struct PurchaseOptionView_Previews: PreviewProvider {
     static var previews: some View {
         HStack {
-            PurchaseOptionView(sub: Subscription.example1, isSelected: false)
+            PurchaseOptionView(sub: Subscription.example1, isSelected: true)
             PurchaseOptionView(sub: Subscription.example2, isSelected: true)
-            PurchaseOptionView(sub: Subscription.example3, isSelected: false)
+            PurchaseOptionView(sub: Subscription.example3, isSelected: true)
         }
     }
 }
