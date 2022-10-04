@@ -76,6 +76,9 @@ struct PurchaseOptionView: View {
                         .padding(.top, 2)
                         .padding(.horizontal, 6)
                         .minimumScaleFactor(0.1)
+                    
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .stroke(Color.yellow, lineWidth: 1.5)
                 }
             )
         }

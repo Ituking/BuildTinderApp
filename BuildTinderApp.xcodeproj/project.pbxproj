@@ -39,6 +39,7 @@
 		C7FE155B28EB23D300693E7D /* PurchasePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FE155928EB23D300693E7D /* PurchasePopup.swift */; };
 		C7FE155E28EB2A7E00693E7D /* PurchaseOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FE155D28EB2A7E00693E7D /* PurchaseOptionView.swift */; };
 		C7FE156028EB2B1500693E7D /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FE155F28EB2B1500693E7D /* Subscription.swift */; };
+		C7FE156228EBF69300693E7D /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FE156128EBF69300693E7D /* RoundedCorner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		C7FE155928EB23D300693E7D /* PurchasePopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasePopup.swift; sourceTree = "<group>"; };
 		C7FE155D28EB2A7E00693E7D /* PurchaseOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseOptionView.swift; sourceTree = "<group>"; };
 		C7FE155F28EB2B1500693E7D /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		C7FE156128EBF69300693E7D /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				C7E1278628DCB4AC0030C1F9 /* BuildTinderApp */,
-				C7E1279528DCB57F0030C1F9 /* Extensions.swift */,
+				C7FE156328EBF6BB00693E7D /* Extensions */,
 				C7E1278528DCB4AC0030C1F9 /* Products */,
 				C7E127A628DCCC5B0030C1F9 /* Frameworks */,
 			);
@@ -222,6 +224,15 @@
 			path = Purchase;
 			sourceTree = "<group>";
 		};
+		C7FE156328EBF6BB00693E7D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C7E1279528DCB57F0030C1F9 /* Extensions.swift */,
+				C7FE156128EBF69300693E7D /* RoundedCorner.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -310,6 +321,7 @@
 				C7E1279828DCB5B90030C1F9 /* AppStateManager.swift in Sources */,
 				C740FA8428DD7A2E00BA50DB /* ChatView.swift in Sources */,
 				C740FA7D28DD706E00BA50DB /* Person.swift in Sources */,
+				C7FE156228EBF69300693E7D /* RoundedCorner.swift in Sources */,
 				C7FE156028EB2B1500693E7D /* Subscription.swift in Sources */,
 				C7FE155B28EB23D300693E7D /* PurchasePopup.swift in Sources */,
 				C740FA8128DD74AE00BA50DB /* MessageView.swift in Sources */,
