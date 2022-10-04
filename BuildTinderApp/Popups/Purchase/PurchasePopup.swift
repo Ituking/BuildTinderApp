@@ -22,7 +22,7 @@ struct PurchasePopup: View {
     ]
     
     func processPayment() {
-        
+//        let product = subscriptions[selectedIndex]
     }
     
     var body: some View {
@@ -46,6 +46,9 @@ struct PurchasePopup: View {
                             let sub = subscriptions[subIndex]
                             
                             PurchaseOptionView(sub: sub, isSelected: subIndex == selectedIndex)
+                                .onTapGesture(perform: {
+                                    selectedIndex = subIndex
+                                })
                         }
                     }
                     
