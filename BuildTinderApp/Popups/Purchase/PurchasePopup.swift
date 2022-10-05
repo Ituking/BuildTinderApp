@@ -22,20 +22,18 @@ struct PurchasePopup: View {
     ]
     
     func processPayment() {
-//        let product = subscriptions[selectedIndex]
+        //        let product = subscriptions[selectedIndex]
     }
     
     var body: some View {
         GeometryReader { geo in
             VStack {
-                Spacer()
-                    .frame(height: 40)
+                Spacer().frame(height: 40)
                 
                 VStack {
                     Text("Get Tinder Gold")
                         .foregroundColor(.yellow)
-                        .font(.system(size: 24))
-                        .fontWeight(.bold)
+                        .font(.system(size: 24, weight: .bold))
                     
                     PurchaseSwipePromo()
                         .frame(height: geo.size.height / 3)
@@ -44,7 +42,6 @@ struct PurchasePopup: View {
                     HStack {
                         ForEach(subscriptions.indices) { subIndex in
                             let sub = subscriptions[subIndex]
-                            
                             PurchaseOptionView(sub: sub, isSelected: subIndex == selectedIndex)
                                 .onTapGesture(perform: {
                                     selectedIndex = subIndex
@@ -61,8 +58,7 @@ struct PurchasePopup: View {
                             
                             Text("CONTINUE")
                                 .foregroundColor(.white)
-                                .font(.system(size: 20))
-                                .fontWeight(.heavy)
+                                .font(.system(size: 20, weight: .heavy))
                         }
                     })
                     .frame(height: 55)
@@ -70,10 +66,9 @@ struct PurchasePopup: View {
                     .padding(.top, 12)
                     
                     Button(action: { isVisible = false }, label: {
-                        Text("No Thanks")
+                        Text("NO THANKS")
                             .foregroundColor(.textPrimary)
-                            .font(.system(size: 20))
-                            .fontWeight(.heavy)
+                            .font(.system(size: 20, weight: .heavy))
                     })
                     .padding(.vertical, 18)
                 }
@@ -82,19 +77,17 @@ struct PurchasePopup: View {
                 .background(
                     RoundedRectangle(cornerRadius: 25, style: .continuous)
                         .foregroundColor(.white)
-            )
+                )
                 
                 Spacer()
                 
                 VStack(spacing: 4) {
                     Text("Recurring billing, cancel anytime.")
                         .foregroundColor(.white)
-                        .font(.system(size: 14))
-                        .fontWeight(.semibold)
-                    Text("This is a bunch of example text is representing the legal text found on all subscription pages. Out of respect to the original application we will not be copying over their legal text word for word here.")
-                        .foregroundColor(.white.opacity(0.5))
-                        .font(.system(size: 14))
-                        .fontWeight(.semibold)
+                        .font(.system(size: 14, weight: .semibold))
+                    Text("This is a bunch of example text that is representing the legal text found on all subscription pages. Out of respect to the original application we will not be copying over their legal text word for word here.")
+                        .foregroundColor(Color.white.opacity(0.5))
+                        .font(.system(size: 14, weight: .semibold))
                         .multilineTextAlignment(.center)
                 }
                 .padding(.bottom, 20)
@@ -110,6 +103,6 @@ struct PurchasePopup: View {
 
 struct PurchasePopup_Previews: PreviewProvider {
     static var previews: some View {
-        PurchasePopup(isVisible: .constant(false))
+        PurchasePopup(isVisible: .constant(true))
     }
 }
