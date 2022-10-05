@@ -55,7 +55,6 @@ struct MainView: View {
                         TabBarButtonView(type: .profile)
                         
                         Spacer()
-                        
                     }
                     .frame(height: 100)
                     .padding(.top, 30)
@@ -79,7 +78,8 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView().environmentObject(AppStateManager())
+        MainView()
+            .environmentObject(AppStateManager())
             .environmentObject(UserManager())
     }
 }
