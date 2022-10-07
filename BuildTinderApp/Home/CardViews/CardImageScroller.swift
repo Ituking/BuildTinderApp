@@ -39,8 +39,16 @@ struct CardImageScroller: View {
                     .clipped()
                 
                 HStack {
-                    
+                    Rectangle()
+                        .onTapGesture(perform: {
+                            updateImageIndex(additon: false)
+                        })
+                    Rectangle()
+                        .onTapGesture(perform: {
+                            updateImageIndex(additon: true)
+                        })
                 }
+                .foregroundColor(Color.white.opacity(0.01))
             }
         }
     }
