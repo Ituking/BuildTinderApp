@@ -64,6 +64,20 @@ struct CardImageScroller: View {
                     .padding(.horizontal, 12)
                     
                     Spacer()
+                    
+                    HStack {
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text(person.name)
+                                    .font(.system(size: 32))
+                                    .fontWeight(.heavy)
+                                
+                                Text(String(person.age))
+                                    .font(.system(size: 28))
+                                    .fontWeight(.light)
+                            }
+                        }
+                    }
                 }
             }
         }
