@@ -14,6 +14,8 @@ struct CardImageScroller: View {
     
     @State private var imageIndex = 0
     
+    @Binding var fullscreenMode: Bool
+    
     func updateImageIndex(additon: Bool) {
         let newIndex: Int
         
@@ -82,15 +84,27 @@ struct CardImageScroller: View {
                                 .fontWeight(.medium)
                                 .lineLimit(2)
                         }
+                        
+                        Spacer()
+                        
+                        Button(action: {}, label: {
+                            Image(systemName: "info.circle.fill")
+                                .font(.system(size: 26))
+                                .fontWeight(.medium)
+                        })
                     }
+                    .padding(16)
                 }
+                .foregroundColor(Color.white)
             }
+            .cornerRadius(6)
+            .shadow(radius: 5)
         }
     }
 }
 
 struct CardImageScroller_Previews: PreviewProvider {
     static var previews: some View {
-        CardImageScroller(person: Person.example)
+        CardImageScroller(person: Person.example, fullscreenMode: .constant(false))
     }
 }
