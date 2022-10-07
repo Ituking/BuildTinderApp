@@ -29,26 +29,38 @@ struct CardImageScroller: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                KFImage(person.imageURLS[imageIndex])
-                    .placeholder {
-                        Color.white
+                ZStack {
+                    KFImage(person.imageURLS[imageIndex])
+                        .placeholder {
+                            Color.white
+                        }
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: geo.size.width, height: geo.size.height)
+                        .clipped()
+                    
+                    HStack {
+                        Rectangle()
+                            .onTapGesture(perform: {
+                                updateImageIndex(additon: false)
+                            })
+                        Rectangle()
+                            .onTapGesture(perform: {
+                                updateImageIndex(additon: true)
+                            })
                     }
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: geo.size.width, height: geo.size.height)
-                    .clipped()
-                
-                HStack {
-                    Rectangle()
-                        .onTapGesture(perform: {
-                            updateImageIndex(additon: false)
-                        })
-                    Rectangle()
-                        .onTapGesture(perform: {
-                            updateImageIndex(additon: true)
-                        })
+                    .foregroundColor(Color.white.opacity(0.01))
                 }
-                .foregroundColor(Color.white.opacity(0.01))
+                
+                VStack {
+                    HStack {
+                        ForEach(0..<person.imageURLS.count) { imageIndex in
+                            RoundedRectangle(cornerRadius: 20)
+                                .frame(height: 4)
+                        }
+                    }
+                    Spacer()
+                }
             }
         }
     }
