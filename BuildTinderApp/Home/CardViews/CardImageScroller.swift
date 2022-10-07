@@ -57,8 +57,12 @@ struct CardImageScroller: View {
                         ForEach(0..<person.imageURLS.count) { imageIndex in
                             RoundedRectangle(cornerRadius: 20)
                                 .frame(height: 4)
+                                .foregroundColor(self.imageIndex == imageIndex ? Color.white : Color.gray.opacity(0.5))
                         }
                     }
+                    .padding(.top, 6)
+                    .padding(.horizontal, 12)
+                    
                     Spacer()
                 }
             }
