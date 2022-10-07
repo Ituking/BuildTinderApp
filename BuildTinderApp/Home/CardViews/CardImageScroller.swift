@@ -14,6 +14,10 @@ struct CardImageScroller: View {
     
     @State private var imageIndex = 0
     
+    func updateImageIndex(additon: Bool) {
+        
+    }
+    
     var body: some View {
         GeometryReader { geo in
             ZStack {
