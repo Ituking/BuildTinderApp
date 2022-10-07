@@ -15,8 +15,17 @@ struct CardImageScroller: View {
     @State private var imageIndex = 0
     
     var body: some View {
-        ZStack {
-            KFImage(person.imageURLS[imageIndex])
+        GeometryReader { geo in
+            ZStack {
+                KFImage(person.imageURLS[imageIndex])
+                    .placeholder {
+                        Color.white
+                    }
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .clipped()
+            }
         }
     }
 }
