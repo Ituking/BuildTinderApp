@@ -36,7 +36,7 @@ struct MatchesView: View {
             VStack(spacing: 0) {
                 HStack {
                     Spacer()
-                    
+
                     Button(action: { selectedTab = .likes }, label: {
                         Text("\(userMng.matches.count) Likes")
                             .font(.system(size: 22))
@@ -46,9 +46,9 @@ struct MatchesView: View {
                             }
                     })
                     .buttonStyle(PlainButtonStyle())
-                    
+
                     Spacer()
-                    
+
                     Button(action: { selectedTab = .topPicks }, label: {
                         Text("\(userMng.topPicks.count) Top Picks")
                             .font(.system(size: 22))
