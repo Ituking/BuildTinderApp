@@ -5,7 +5,7 @@
 //  Created by 大久保樹 on 2022/09/23.
 //
 
-import Foundation
+import SwiftUI
 
 
 struct Person: Hashable, Identifiable {
@@ -16,6 +16,10 @@ struct Person: Hashable, Identifiable {
     var bio: String
     
     var age: Int
+    
+    // Used for card manipulation
+    var x: CGFloat = 0.0
+    var y: CGFloat = 0.0
 }
 
 extension Person {
