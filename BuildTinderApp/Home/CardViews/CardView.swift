@@ -12,10 +12,14 @@ struct CardView: View {
     @Binding var fullscreenMode: Bool
     
     var body: some View {
-        if fullscreenMode {
-            Text("FULL SCREEN")
-        } else {
-            CardImageScroller(person: person, fullscreenMode: $fullscreenMode)
+        GeometryReader { geo in
+            if fullscreenMode {
+                Text("FULL SCREEN")
+            } else {
+                CardImageScroller(person: person, fullscreenMode: $fullscreenMode)
+                    .frame(width: geo.size.width - 20, height: geo.size.height)
+                    .padding(.leading, 10)
+            }
         }
     }
 }

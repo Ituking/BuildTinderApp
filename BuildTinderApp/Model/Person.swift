@@ -20,6 +20,7 @@ struct Person: Hashable, Identifiable {
     // Used for card manipulation
     var x: CGFloat = 0.0
     var y: CGFloat = 0.0
+    var degree: Double = 0.0
 }
 
 extension Person {
