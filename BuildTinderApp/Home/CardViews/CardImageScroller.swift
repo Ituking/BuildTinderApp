@@ -76,6 +76,11 @@ struct CardImageScroller: View {
                                     .font(.system(size: 28))
                                     .fontWeight(.light)
                             }
+                            
+                            Text(person.bio)
+                                .font(.system(size: 18))
+                                .fontWeight(.medium)
+                                .lineLimit(2)
                         }
                     }
                 }
