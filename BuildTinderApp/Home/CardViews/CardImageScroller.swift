@@ -63,37 +63,39 @@ struct CardImageScroller: View {
                         }
                     }
                     .padding(.top, 6)
-                    .padding(.horizontal, 12)
+                    .padding(.horizontal, fullscreenMode ? 0 : 12)
                     
                     Spacer()
                     
-                    HStack {
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text(person.name)
-                                    .font(.system(size: 32))
-                                    .fontWeight(.heavy)
+                    if !fullscreenMode {
+                        HStack {
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    Text(person.name)
+                                        .font(.system(size: 32))
+                                        .fontWeight(.heavy)
+                                    
+                                    Text(String(person.age))
+                                        .font(.system(size: 28))
+                                        .fontWeight(.light)
+                                }
                                 
-                                Text(String(person.age))
-                                    .font(.system(size: 28))
-                                    .fontWeight(.light)
+                                Text(person.bio)
+                                    .font(.system(size: 18))
+                                    .fontWeight(.medium)
+                                    .lineLimit(2)
                             }
                             
-                            Text(person.bio)
-                                .font(.system(size: 18))
-                                .fontWeight(.medium)
-                                .lineLimit(2)
+                            Spacer()
+                            
+                            Button(action: { fullscreenMode = true }, label: {
+                                Image(systemName: "info.circle.fill")
+                                    .font(.system(size: 26))
+                                    .fontWeight(.medium)
+                            })
                         }
-                        
-                        Spacer()
-                        
-                        Button(action: {}, label: {
-                            Image(systemName: "info.circle.fill")
-                                .font(.system(size: 26))
-                                .fontWeight(.medium)
-                        })
+                        .padding(16)
                     }
-                    .padding(16)
                 }
                 .foregroundColor(Color.white)
             }
@@ -105,6 +107,6 @@ struct CardImageScroller: View {
 
 struct CardImageScroller_Previews: PreviewProvider {
     static var previews: some View {
-        CardImageScroller(person: Person.example, fullscreenMode: .constant(false))
+        CardImageScroller(person: Person.example, fullscreenMode: .constant(true))
     }
 }
