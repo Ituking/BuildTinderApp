@@ -12,8 +12,12 @@ struct CardImageScroller: View {
     
     var person: Person
     
+    @State private var imageIndex = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            KFImage(person.imageURLS[imageIndex])
+        }
     }
 }
 
