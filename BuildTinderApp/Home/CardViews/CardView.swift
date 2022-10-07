@@ -19,6 +19,20 @@ struct CardView: View {
                 CardImageScroller(person: person, fullscreenMode: $fullscreenMode)
                     .frame(width: geo.size.width - 20, height: geo.size.height)
                     .padding(.leading, 10)
+                    .offset(x: person.x, y: person.y)
+                    .rotationEffect(.degrees(person.degree))
+                    .gesture(
+                        DragGesture()
+                            .onChanged({ value in
+                                withAnimation(.default) {
+                                    person.x = value.translation.width
+                                    person.y = value.translation.height
+                                    withAnimation {
+                                        person.degree = Double((value.translation.width / 25 * -1))
+                                    }
+                                }
+                            })
+                    )
             }
         }
     }
