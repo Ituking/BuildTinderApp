@@ -15,7 +15,15 @@ struct CardImageScroller: View {
     @State private var imageIndex = 0
     
     func updateImageIndex(additon: Bool) {
+        let newIndex: Int
         
+        if additon  {
+            newIndex = imageIndex + 1
+        } else {
+            newIndex = imageIndex - 1
+        }
+        
+        imageIndex = min(max(0, newIndex), person.imageURLS.count - 1)
     }
     
     var body: some View {
@@ -29,6 +37,10 @@ struct CardImageScroller: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: geo.size.width, height: geo.size.height)
                     .clipped()
+                
+                HStack {
+                    
+                }
             }
         }
     }
