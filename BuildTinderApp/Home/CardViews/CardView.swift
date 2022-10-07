@@ -17,6 +17,7 @@ struct CardView: View {
                 Text("FULL SCREEN")
             } else {
                 CardImageScroller(person: person, fullscreenMode: $fullscreenMode)
+                    .animation(.easeOut(duration: 0.2))
                     .frame(width: geo.size.width - 20, height: geo.size.height)
                     .padding(.leading, 10)
                     .offset(x: person.x, y: person.y)
@@ -28,8 +29,13 @@ struct CardView: View {
                                     person.x = value.translation.width
                                     person.y = value.translation.height
                                     withAnimation {
-                                        person.degree = Double((value.translation.width / 25 * -1))
+                                        person.degree = Double((value.translation.width / 25) * -1)
                                     }
+                                }
+                            })
+                            .onEnded({ value in
+                                withAnimation(.interpolatingSpring(mass: 1.0, stiffness: 50, damping: 10, initialVelocity: 0)) {
+                                    let width = value.translation.width
                                 }
                             })
                     )
