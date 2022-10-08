@@ -56,6 +56,13 @@ struct FullScreenCardView: View {
                 
                 Spacer().frame(height: 26)
                 
+                HStack {
+                    Text(person.bio)
+                        .font(.system(size: 18))
+                        .fontWeight(.medium)
+                        .lineLimit(20)
+                        .multilineTextAlignment(.leading)
+                }
             }
         }
     }
