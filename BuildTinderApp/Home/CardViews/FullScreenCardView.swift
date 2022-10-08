@@ -50,8 +50,12 @@ struct FullScreenCardView: View {
                             .background(Color.white)
                             .clipShape(Circle())
                     })
+                    .padding(.trailing, 16)
                     .offset(y: -40)
                 }
+                
+                Spacer().frame(height: 26)
+                
             }
         }
     }
