@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C72E6E2828F19CFC00BE824F /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E6E2728F19CFC00BE824F /* CircleButtonView.swift */; };
 		C740FA7828DCF19F00BA50DB /* ProfileSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA7728DCF19F00BA50DB /* ProfileSwipePromo.swift */; };
 		C740FA7A28DD6DB900BA50DB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA7928DD6DB900BA50DB /* Message.swift */; };
 		C740FA7D28DD706E00BA50DB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA7C28DD706E00BA50DB /* Person.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C72E6E2728F19CFC00BE824F /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		C740FA7728DCF19F00BA50DB /* ProfileSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwipePromo.swift; sourceTree = "<group>"; };
 		C740FA7928DD6DB900BA50DB /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		C740FA7C28DD706E00BA50DB /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				C7E127A128DCB7310030C1F9 /* RoundedImage.swift */,
+				C72E6E2728F19CFC00BE824F /* CircleButtonView.swift */,
 			);
 			path = HelperView;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				C740FA8628DD7B1000BA50DB /* ChatManager.swift in Sources */,
 				C740FA8A28E16C2100BA50DB /* MessageListView.swift in Sources */,
 				C7E1279C28DCB6380030C1F9 /* TabBarButtonView.swift in Sources */,
+				C72E6E2828F19CFC00BE824F /* CircleButtonView.swift in Sources */,
 				C7C6E57A28E73879009BEAE0 /* PersonSquare.swift in Sources */,
 				C7E127A228DCB7310030C1F9 /* RoundedImage.swift in Sources */,
 				C740FA8828DD9BE200BA50DB /* ChatViewHeader.swift in Sources */,
