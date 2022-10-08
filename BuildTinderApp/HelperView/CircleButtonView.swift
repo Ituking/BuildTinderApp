@@ -15,6 +15,16 @@ enum ButtonType: String {
     case lightning = "cloud.bolt.fill"
 }
 
+struct CircleButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .background(
+                Circle()
+                    .foregroundColor(Color.white)
+            )
+    }
+}
+
 struct CircleButtonView: View {
     var type: ButtonType
     var action: () -> Void
@@ -27,6 +37,7 @@ struct CircleButtonView: View {
                 .fontWeight(.bold)
                 .aspectRatio(contentMode: .fit)
         })
+        .buttonStyle(CircleButton())
     }
 }
 
