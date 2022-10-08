@@ -62,7 +62,13 @@ struct FullScreenCardView: View {
                         .fontWeight(.medium)
                         .lineLimit(20)
                         .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .opacity(0.75)
+                        .padding(.horizontal, 16)
+                    
+                    Spacer()
                 }
+                Spacer().frame(height: 32)
             }
         }
     }
