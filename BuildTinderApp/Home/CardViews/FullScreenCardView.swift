@@ -69,6 +69,21 @@ struct FullScreenCardView: View {
                     Spacer()
                 }
                 Spacer().frame(height: 32)
+                
+                VStack(spacing: 24) {
+                    Button(action: {}, label: {
+                        VStack(spacing: 8) {
+                            Text("SHARE \(person.name.uppercased())'S PROFILE")
+                                .font(.system(size: 16))
+                                .fontWeight(.medium)
+                            
+                            Text("SEE WHAT A FRIEND THINGS")
+                                .font(.system(size: 14))
+                                .fontWeight(.medium)
+                        }
+                        .opacity(0.9)
+                    })
+                }
             }
         }
     }
