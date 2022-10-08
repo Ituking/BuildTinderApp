@@ -14,6 +14,8 @@ struct FullScreenCardView: View {
     
     let screen = UIScreen.main.bounds
     
+    @EnvironmentObject var userMng: UserManager
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             ScrollView(showsIndicators: false) {
@@ -101,7 +103,7 @@ struct FullScreenCardView: View {
             HStack(spacing: 20) {
                 Spacer()
                 CircleButtonView(type: .no) {
-                    //
+                    userMng.swipe(person, .nope)
                 }
                 .frame(height: 50)
                 
@@ -111,7 +113,7 @@ struct FullScreenCardView: View {
                 .frame(height: 45)
                 
                 CircleButtonView(type: .heart) {
-                    //
+                    userMng.swipe(person, .like)
                 }
                 .frame(height: 50)
                 

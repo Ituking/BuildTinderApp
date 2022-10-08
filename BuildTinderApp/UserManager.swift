@@ -38,11 +38,13 @@ class UserManager: ObservableObject {
     }
     
     public func swipe(_ person: Person, _ direction: SwipeDirection) {
-        
+        cardPeople.removeLast()
+        // Networking to backend
     }
     
     public func superLike(_ person: Person) {
-        
+        cardPeople.removeLast()
+        // Networking to backend
     }
 }
 
