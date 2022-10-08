@@ -22,6 +22,7 @@ struct CircleButton: ButtonStyle {
                 Circle()
                     .foregroundColor(Color.white)
             )
+            .scaleEffect(configuration.isPressed ? 0.7 : 1.0)
     }
 }
 
@@ -36,6 +37,7 @@ struct CircleButtonView: View {
                 .font(.system(size: 12))
                 .fontWeight(.bold)
                 .aspectRatio(contentMode: .fit)
+                .padding(12)
         })
         .buttonStyle(CircleButton())
     }
