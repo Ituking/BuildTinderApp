@@ -11,6 +11,8 @@ struct CardView: View {
     @State var person: Person
     @Binding var fullscreenMode: Bool
     
+    let screenCutOff = (UIScreen.main.bounds.width / 2) * 0.8
+    
     var body: some View {
         GeometryReader { geo in
             if fullscreenMode {
@@ -36,6 +38,18 @@ struct CardView: View {
                             .onEnded({ value in
                                 withAnimation(.interpolatingSpring(mass: 1.0, stiffness: 50, damping: 10, initialVelocity: 0)) {
                                     let width = value.translation.width
+                                    
+                                    if width >= 0 && width <= screenCutOff {
+                                        // Snap back to middle
+                                        person.x = 0
+                                        person.y = 0
+                                        person.degree = 0
+                                    } else if width  <= -1 && width >= -screenCutOff {
+                                        // Snap back to middle
+                                        person.x = 0
+                                        person.y = 0
+                                        person.degree = 0
+                                    }
                                 }
                             })
                     )
