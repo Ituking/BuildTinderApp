@@ -60,6 +60,12 @@ struct ColorButton: ViewModifier {
     }
 }
 
+extension View {
+    func colorButton(type: ButtonType) -> some View {
+        self.modifier(ColorButton(type: type))
+    }
+}
+
 struct CircleButtonView: View {
     var type: ButtonType
     var action: () -> Void
@@ -74,7 +80,8 @@ struct CircleButtonView: View {
                 .padding(12)
         })
         .buttonStyle(CircleButton())
-        .modifier(ColorButton(type: type))
+//        .modifier(ColorButton(type: type))
+        .colorButton(type: type)
     }
 }
 
