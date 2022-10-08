@@ -15,76 +15,90 @@ struct FullScreenCardView: View {
     let screen = UIScreen.main.bounds
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(spacing: 0) {
-                CardImageScroller(
-                    person: person,
-                    fullscreenMode: $fullScreenMode)
-                .frame(width: screen.width, height: screen.height * 0.6)
-                
-                HStack {
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text(person.name)
-                                .font(.system(size: 32))
-                                .fontWeight(.heavy)
+        ZStack(alignment: .bottom) {
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 0) {
+                    CardImageScroller(
+                        person: person,
+                        fullscreenMode: $fullScreenMode)
+                    .frame(width: screen.width, height: screen.height * 0.6)
+                    
+                    HStack {
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text(person.name)
+                                    .font(.system(size: 32))
+                                    .fontWeight(.heavy)
+                                
+                                Text(String(person.age))
+                                    .font(.system(size: 28))
+                                    .fontWeight(.light)
+                                
+                                Spacer()
+                            }
+                            .opacity(0.75)
                             
-                            Text(String(person.age))
-                                .font(.system(size: 28))
-                                .fontWeight(.light)
-                            
-                            Spacer()
+                            Text("\(person.distance) miles away")
+                                .font(.system(size: 18))
+                                .fontWeight(.medium)
+                                .opacity(0.75)
                         }
-                        .opacity(0.75)
+                        .padding([.horizontal, .top], 16)
                         
-                        Text("\(person.distance) miles away")
+                        Button(action: {}, label: {
+                            Image(systemName: "arrow.down.circle.fill")
+                                .font(.system(size: 42))
+                                .background(Color.white)
+                                .clipShape(Circle())
+                        })
+                        .padding(.trailing, 16)
+                        .offset(y: -40)
+                    }
+                    
+                    Spacer().frame(height: 26)
+                    
+                    HStack {
+                        Text(person.bio)
                             .font(.system(size: 18))
                             .fontWeight(.medium)
+                            .lineLimit(20)
+                            .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
                             .opacity(0.75)
+                            .padding(.horizontal, 16)
+                        
+                        Spacer()
                     }
-                    .padding([.horizontal, .top], 16)
+                    Spacer().frame(height: 32)
                     
-                    Button(action: {}, label: {
-                        Image(systemName: "arrow.down.circle.fill")
-                            .font(.system(size: 42))
-                            .background(Color.white)
-                            .clipShape(Circle())
-                    })
-                    .padding(.trailing, 16)
-                    .offset(y: -40)
-                }
-                
-                Spacer().frame(height: 26)
-                
-                HStack {
-                    Text(person.bio)
-                        .font(.system(size: 18))
-                        .fontWeight(.medium)
-                        .lineLimit(20)
-                        .multilineTextAlignment(.leading)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .opacity(0.75)
-                        .padding(.horizontal, 16)
+                    VStack(spacing: 24) {
+                        Button(action: {}, label: {
+                            VStack(spacing: 8) {
+                                Text("SHARE \(person.name.uppercased())'S PROFILE")
+                                    .font(.system(size: 16))
+                                    .fontWeight(.medium)
+                                
+                                Text("SEE WHAT A FRIEND THINGS")
+                                    .font(.system(size: 14))
+                                    .fontWeight(.medium)
+                            }
+                            .opacity(0.9)
+                        })
+                        
+                        Button(action: {}, label: {
+                            Text("REPORT \(person.name.uppercased())")
+                                .font(.system(size: 18))
+                                .fontWeight(.medium)
+                                .foregroundColor(.black)
+                                .opacity(0.75)
+                        })
+                    }
                     
-                    Spacer()
-                }
-                Spacer().frame(height: 32)
-                
-                VStack(spacing: 24) {
-                    Button(action: {}, label: {
-                        VStack(spacing: 8) {
-                            Text("SHARE \(person.name.uppercased())'S PROFILE")
-                                .font(.system(size: 16))
-                                .fontWeight(.medium)
-                            
-                            Text("SEE WHAT A FRIEND THINGS")
-                                .font(.system(size: 14))
-                                .fontWeight(.medium)
-                        }
-                        .opacity(0.9)
-                    })
+                    Spacer().frame(height: 200)
                 }
             }
+            
+            Text("TEST")
         }
     }
 }
