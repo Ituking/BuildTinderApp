@@ -32,8 +32,21 @@ struct CircleButtonView: View {
 
 struct CircleButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        CircleButtonView(type: .back) {
-            // Do something
+        ZStack {
+            Color.gray.opacity(0.2)
+                .edgesIgnoringSafeArea(.all)
+            VStack(spacing: 50) {
+                CircleButtonView(type: .back) {}
+                    .frame(height: 50)
+                CircleButtonView(type: .no) {}
+                    .frame(height: 50)
+                CircleButtonView(type: .star) {}
+                    .frame(height: 50)
+                CircleButtonView(type: .heart) {}
+                    .frame(height: 50)
+                CircleButtonView(type: .lightning) {}
+                    .frame(height: 50)
+            }
         }
     }
 }
