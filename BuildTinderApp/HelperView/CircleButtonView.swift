@@ -26,6 +26,40 @@ struct CircleButton: ButtonStyle {
     }
 }
 
+struct ColorButton: ViewModifier {
+    var type: ButtonType
+    
+    func body(content: Content) -> some View {
+        switch type {
+        case .back:
+            return AnyView(
+                content
+                    .foregroundColor(.yellow)
+            )
+        case .no:
+            return AnyView(
+                content
+                    .foregroundColor(.red)
+            )
+        case .star:
+            return AnyView(
+                content
+                    .foregroundColor(.blue)
+            )
+        case .heart:
+            return AnyView(
+                content
+                    .foregroundColor(.green)
+            )
+        case .lightning:
+            return AnyView(
+                content
+                    .foregroundColor(.purple)
+            )
+        }
+    }
+}
+
 struct CircleButtonView: View {
     var type: ButtonType
     var action: () -> Void
@@ -40,6 +74,7 @@ struct CircleButtonView: View {
                 .padding(12)
         })
         .buttonStyle(CircleButton())
+        .modifier(ColorButton(type: type))
     }
 }
 
