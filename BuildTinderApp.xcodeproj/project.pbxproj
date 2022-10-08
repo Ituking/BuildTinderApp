@@ -22,6 +22,7 @@
 		C740FA9228E46EAE00BA50DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA9128E46EAE00BA50DB /* User.swift */; };
 		C7915FFB28EFEEFE00973C9D /* CardImageScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7915FFA28EFEEFE00973C9D /* CardImageScroller.swift */; };
 		C7915FFF28F0476800973C9D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7915FFE28F0476800973C9D /* CardView.swift */; };
+		C7AEBC7028F11E40003FACF4 /* FullScreenCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AEBC6F28F11E40003FACF4 /* FullScreenCardView.swift */; };
 		C7B23D0C28E9A7240004B2BD /* TopPicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B23D0B28E9A7240004B2BD /* TopPicksView.swift */; };
 		C7B23D0E28E9A95C0004B2BD /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B23D0D28E9A95C0004B2BD /* MatchesView.swift */; };
 		C7C6E57A28E73879009BEAE0 /* PersonSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C6E57928E73879009BEAE0 /* PersonSquare.swift */; };
@@ -60,6 +61,7 @@
 		C740FA9128E46EAE00BA50DB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C7915FFA28EFEEFE00973C9D /* CardImageScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageScroller.swift; sourceTree = "<group>"; };
 		C7915FFE28F0476800973C9D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C7AEBC6F28F11E40003FACF4 /* FullScreenCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCardView.swift; sourceTree = "<group>"; };
 		C7B23D0B28E9A7240004B2BD /* TopPicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksView.swift; sourceTree = "<group>"; };
 		C7B23D0D28E9A95C0004B2BD /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
 		C7C6E57928E73879009BEAE0 /* PersonSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSquare.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				C7915FFA28EFEEFE00973C9D /* CardImageScroller.swift */,
 				C7915FFE28F0476800973C9D /* CardView.swift */,
+				C7AEBC6F28F11E40003FACF4 /* FullScreenCardView.swift */,
 			);
 			path = CardViews;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7AEBC7028F11E40003FACF4 /* FullScreenCardView.swift in Sources */,
 				C740FA8628DD7B1000BA50DB /* ChatManager.swift in Sources */,
 				C740FA8A28E16C2100BA50DB /* MessageListView.swift in Sources */,
 				C7E1279C28DCB6380030C1F9 /* TabBarButtonView.swift in Sources */,
