@@ -47,7 +47,7 @@ struct FullScreenCardView: View {
                         }
                         .padding([.horizontal, .top], 16)
                         
-                        Button(action: {}, label: {
+                        Button(action: { fullScreenMode = false }, label: {
                             Image(systemName: "arrow.down.circle.fill")
                                 .font(.system(size: 42))
                                 .background(Color.white)
@@ -103,16 +103,19 @@ struct FullScreenCardView: View {
             HStack(spacing: 20) {
                 Spacer()
                 CircleButtonView(type: .no) {
+                    fullScreenMode = false
                     userMng.swipe(person, .nope)
                 }
                 .frame(height: 50)
                 
                 CircleButtonView(type: .star) {
-                    //
+                    fullScreenMode = false
+                    userMng.superLike(person)
                 }
                 .frame(height: 45)
                 
                 CircleButtonView(type: .heart) {
+                    fullScreenMode = false
                     userMng.swipe(person, .like)
                 }
                 .frame(height: 50)
