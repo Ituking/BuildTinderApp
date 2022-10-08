@@ -21,6 +21,23 @@ struct FullScreenCardView: View {
                     person: person,
                     fullscreenMode: $fullScreenMode)
                 .frame(width: screen.width, height: screen.height * 0.6)
+                
+                HStack {
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text(person.name)
+                                .font(.system(size: 32))
+                                .fontWeight(.heavy)
+                            
+                            Text(String(person.age))
+                                .font(.system(size: 28))
+                                .fontWeight(.light)
+                            
+                            Spacer()
+                        }
+                        .opacity(0.75)
+                    }
+                }
             }
         }
     }

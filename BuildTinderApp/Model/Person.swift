@@ -14,6 +14,9 @@ struct Person: Hashable, Identifiable {
     var name: String
     var imageURLS: [URL]
     var bio: String
+    var distance: Int
+    
+//    var bioLong: String
     
     var age: Int
     
@@ -33,12 +36,14 @@ extension Person {
             URL(string: "https://picsum.photos/400/303")!
         ],
         bio: "This is my bio.I wanna go to Shinjyuku.I wanna go to Shinjyuku.I wanna go to Shinjyuku.I wanna go to Shinjyuku.",
+        distance: <#Int#>,
         age: 22
     )
     static let example2 = Person(
         name: "Yuzuha",
         imageURLS: [URL(string: "https://picsum.photos/400/301")!],
         bio: "I wanna go to Shinjyuku.",
+        distance: <#Int#>,
         age: 19
     )
 //    static let example3 = Person(
@@ -55,18 +60,21 @@ extension Person {
             name: "Memi",
             imageURLS: [URL(string: "https://picsum.photos/400/302")!],
             bio: "What are you doing?",
+            distance: <#Int#>,
             age: 20
         ),
         Person(
             name: "Messi",
             imageURLS: [URL(string: "https://picsum.photos/400/303")!],
             bio: "I wanna go back to Barcalona.",
+            distance: <#Int#>,
             age: 35
         ),
         Person(
             name: "Ayana",
             imageURLS: [URL(string: "https://picsum.photos/400/304")!],
             bio: "I like video editing.",
+            distance: <#Int#>,
             age: 26
         )
     ]
