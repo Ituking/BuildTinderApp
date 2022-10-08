@@ -136,7 +136,9 @@ struct FullScreenCardView: View {
     }
     
     func showActionSheet() {
-        
+        let items: [Any] = ["What do you think about \(person.name)?  \n"]
+        let av = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        UIApplication.shared.windows.first?.rootViewController?.present(av, animated: true, completion: nil)
     }
 }
 
