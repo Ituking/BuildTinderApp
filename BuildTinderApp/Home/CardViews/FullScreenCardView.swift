@@ -74,7 +74,7 @@ struct FullScreenCardView: View {
                     Spacer().frame(height: 32)
                     
                     VStack(spacing: 24) {
-                        Button(action: {}, label: {
+                        Button(action: { showActionSheet() }, label: {
                             VStack(spacing: 8) {
                                 Text("SHARE \(person.name.uppercased())'S PROFILE")
                                     .font(.system(size: 16))
@@ -133,6 +133,10 @@ struct FullScreenCardView: View {
         }
         .edgesIgnoringSafeArea(.bottom)
         .padding(.top, 40)
+    }
+    
+    func showActionSheet() {
+        
     }
 }
 
