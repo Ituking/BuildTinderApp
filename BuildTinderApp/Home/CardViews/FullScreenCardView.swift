@@ -119,7 +119,15 @@ struct FullScreenCardView: View {
             }
             .padding(.top, 25)
             .padding(.bottom, 45)
+            .background(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color.white.opacity(0.2), Color.white]),
+                    startPoint: .top,
+                    endPoint: .bottom)
+            )
         }
+        .edgesIgnoringSafeArea(.bottom)
+        .padding(.top, 40)
     }
 }
 
