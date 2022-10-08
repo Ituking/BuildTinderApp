@@ -98,7 +98,27 @@ struct FullScreenCardView: View {
                 }
             }
             
-            Text("TEST")
+            HStack(spacing: 20) {
+                Spacer()
+                CircleButtonView(type: .no) {
+                    //
+                }
+                .frame(height: 50)
+                
+                CircleButtonView(type: .star) {
+                    //
+                }
+                .frame(height: 45)
+                
+                CircleButtonView(type: .heart) {
+                    //
+                }
+                .frame(height: 50)
+                
+                Spacer()
+            }
+            .padding(.top, 25)
+            .padding(.bottom, 45)
         }
     }
 }
