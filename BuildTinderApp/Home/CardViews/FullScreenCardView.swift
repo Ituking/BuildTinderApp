@@ -36,7 +36,13 @@ struct FullScreenCardView: View {
                             Spacer()
                         }
                         .opacity(0.75)
+                        
+                        Text("\(person.distance) miles away")
+                            .font(.system(size: 18))
+                            .fontWeight(.medium)
+                            .opacity(0.75)
                     }
+                    .padding([.horizontal, .top], 16)
                 }
             }
         }
