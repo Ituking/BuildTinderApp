@@ -49,6 +49,14 @@ struct CardView: View {
                                         person.x = 0
                                         person.y = 0
                                         person.degree = 0
+                                    } else if width > screenCutOff {
+                                        // Swipe right
+                                        person.x = 500
+                                        person.degree = 12
+                                    } else if width < -screenCutOff {
+                                        // Swipe left
+                                        person.x = -500
+                                        person.degree = -12
                                     }
                                 }
                             })
