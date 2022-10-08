@@ -43,6 +43,14 @@ struct FullScreenCardView: View {
                             .opacity(0.75)
                     }
                     .padding([.horizontal, .top], 16)
+                    
+                    Button(action: {}, label: {
+                        Image(systemName: "arrow.down.circle.fill")
+                            .font(.system(size: 42))
+                            .background(Color.white)
+                            .clipShape(Circle())
+                    })
+                    .offset(y: -40)
                 }
             }
         }
