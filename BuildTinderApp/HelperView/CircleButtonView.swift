@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-enum ButtonType {
-    case back
-    case no
-    case star
-    case heart
-    case lightning
+enum ButtonType: String {
+    case back = "gobackward"
+    case no = "xmark"
+    case star = "star.fill"
+    case heart = "heart.fill"
+    case lightning = "cloud.bolt.fill"
 }
 
 struct CircleButtonView: View {
@@ -20,7 +20,13 @@ struct CircleButtonView: View {
     var action: () -> Void
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {}, label: {
+            Image(systemName: type.rawValue)
+                .resizable()
+                .font(.system(size: 12))
+                .fontWeight(.bold)
+                .aspectRatio(contentMode: .fit)
+        })
     }
 }
 
