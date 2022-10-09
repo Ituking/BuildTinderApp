@@ -87,10 +87,10 @@ extension Person {
         Person(
             name: "Ayana",
             imageURLS: [
-                URL(string: "https://picsum.photos/400/302")!,
-                URL(string: "https://picsum.photos/400/303")!,
-                URL(string: "https://picsum.photos/400/304")!,
-                URL(string: "https://picsum.photos/400/305")!
+                URL(string: "https://picsum.photos/400/310")!,
+                URL(string: "https://picsum.photos/400/311")!,
+                URL(string: "https://picsum.photos/400/312")!,
+                URL(string: "https://picsum.photos/400/313")!
             ],
             bio: "I like video editing.",
             distance: 5,
