@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C72E6E2828F19CFC00BE824F /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E6E2728F19CFC00BE824F /* CircleButtonView.swift */; };
+		C72E6E2A28F2F9D200BE824F /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E6E2928F2F9D200BE824F /* CardStack.swift */; };
 		C740FA7828DCF19F00BA50DB /* ProfileSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA7728DCF19F00BA50DB /* ProfileSwipePromo.swift */; };
 		C740FA7A28DD6DB900BA50DB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA7928DD6DB900BA50DB /* Message.swift */; };
 		C740FA7D28DD706E00BA50DB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA7C28DD706E00BA50DB /* Person.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		C72E6E2728F19CFC00BE824F /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		C72E6E2928F2F9D200BE824F /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
 		C740FA7728DCF19F00BA50DB /* ProfileSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwipePromo.swift; sourceTree = "<group>"; };
 		C740FA7928DD6DB900BA50DB /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		C740FA7C28DD706E00BA50DB /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				C7915FFA28EFEEFE00973C9D /* CardImageScroller.swift */,
 				C7915FFE28F0476800973C9D /* CardView.swift */,
 				C7AEBC6F28F11E40003FACF4 /* FullScreenCardView.swift */,
+				C72E6E2928F2F9D200BE824F /* CardStack.swift */,
 			);
 			path = CardViews;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				C740FA7F28DD71CA00BA50DB /* MessagePreview.swift in Sources */,
 				C7915FFF28F0476800973C9D /* CardView.swift in Sources */,
 				C740FA9228E46EAE00BA50DB /* User.swift in Sources */,
+				C72E6E2A28F2F9D200BE824F /* CardStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
