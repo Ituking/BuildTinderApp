@@ -23,22 +23,33 @@ struct HomeView: View {
                     //
                 }
                 
+                Spacer()
+                
                 CircleButtonView(type: .no) {
                     //
                 }
+                
+                Spacer()
                 
                 CircleButtonView(type: .star) {
                     //
                 }
                 
+                Spacer()
+                
                 CircleButtonView(type: .heart) {
                     //
                 }
+                
+                Spacer()
                 
                 CircleButtonView(type: .lightning) {
                     //
                 }
             }
+            .frame(height: 50)
+            .padding(.horizontal)
+            .padding(.vertical, 25)
             
         }
     }
