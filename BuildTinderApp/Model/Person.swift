@@ -60,7 +60,12 @@ extension Person {
         Person.example2,
         Person(
             name: "Memi",
-            imageURLS: [URL(string: "https://picsum.photos/400/302")!],
+            imageURLS: [
+                URL(string: "https://picsum.photos/400/302")!,
+                URL(string: "https://picsum.photos/400/303")!,
+                URL(string: "https://picsum.photos/400/304")!,
+                URL(string: "https://picsum.photos/400/305")!
+            ],
             bio: "What are you doing?",
             distance: 2,
             bioLong: "This is my bio.I wanna go to Shinjyuku.I wanna go to Shinjyuku.I wanna go to Shinjyuku.I wanna go to Shinjyuku.",
@@ -68,7 +73,12 @@ extension Person {
         ),
         Person(
             name: "Messi",
-            imageURLS: [URL(string: "https://picsum.photos/400/303")!],
+            imageURLS: [
+                URL(string: "https://picsum.photos/400/306")!,
+                URL(string: "https://picsum.photos/400/307")!,
+                URL(string: "https://picsum.photos/400/308")!,
+                URL(string: "https://picsum.photos/400/309")!
+            ],
             bio: "I wanna go back to Barcalona.",
             distance: 150,
             bioLong: "This is my bio.I wanna go to Shinjyuku.I wanna go to Shinjyuku.I wanna go to Shinjyuku.I wanna go to Shinjyuku.",
@@ -76,7 +86,12 @@ extension Person {
         ),
         Person(
             name: "Ayana",
-            imageURLS: [URL(string: "https://picsum.photos/400/304")!],
+            imageURLS: [
+                URL(string: "https://picsum.photos/400/302")!,
+                URL(string: "https://picsum.photos/400/303")!,
+                URL(string: "https://picsum.photos/400/304")!,
+                URL(string: "https://picsum.photos/400/305")!
+            ],
             bio: "I like video editing.",
             distance: 5,
             bioLong: "This is my bio.I wanna go to Shinjyuku.I wanna go to Shinjyuku.I wanna go to Shinjyuku.I wanna go to Shinjyuku.",

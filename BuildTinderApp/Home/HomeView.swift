@@ -20,36 +20,48 @@ struct HomeView: View {
             
             HStack {
                 CircleButtonView(type: .back) {
-                    //
+                    appState.showPurchaseScreen()
                 }
                 
                 Spacer()
                 
                 CircleButtonView(type: .no) {
-                    //
+                    if let person = userMng.cardPeople.last {
+                        userMng.swipe(person, .nope)
+                    }
                 }
                 
                 Spacer()
                 
                 CircleButtonView(type: .star) {
-                    //
+                    if let person = userMng.cardPeople.last {
+                        if userMng.currentUser.goldSubscriber {
+                            userMng.superLike(person)
+                        } else {
+                            appState.showPurchaseScreen()
+                        }
+                    }
                 }
                 
                 Spacer()
                 
                 CircleButtonView(type: .heart) {
-                    //
+                    if let person = userMng.cardPeople.last {
+                        userMng.swipe(person, .like)
+                    }
                 }
                 
                 Spacer()
                 
                 CircleButtonView(type: .lightning) {
-                    //
+                    appState.showPurchaseScreen()
                 }
             }
             .frame(height: 50)
             .padding(.horizontal)
             .padding(.vertical, 25)
+            
+            Spacer()
             
         }
     }
