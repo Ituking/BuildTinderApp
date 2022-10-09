@@ -12,12 +12,15 @@ struct CardStack: View {
     
     @State private var fullscreenMode: Bool = false
     
+    let screen = UIScreen.main.bounds
+    
     var body: some View {
         ZStack {
             ForEach(people) { person in
                 CardView(person: person, fullscreenMode: $fullscreenMode)
             }
         }
+        .frame(width: screen.width, height: fullscreenMode ? screen.height : 550)
     }
 }
 
