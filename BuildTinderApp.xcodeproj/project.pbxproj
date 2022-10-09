@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C72E6E2828F19CFC00BE824F /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E6E2728F19CFC00BE824F /* CircleButtonView.swift */; };
 		C72E6E2A28F2F9D200BE824F /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E6E2928F2F9D200BE824F /* CardStack.swift */; };
+		C72E6E2C28F307EE00BE824F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E6E2B28F307EE00BE824F /* HomeView.swift */; };
 		C740FA7828DCF19F00BA50DB /* ProfileSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA7728DCF19F00BA50DB /* ProfileSwipePromo.swift */; };
 		C740FA7A28DD6DB900BA50DB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA7928DD6DB900BA50DB /* Message.swift */; };
 		C740FA7D28DD706E00BA50DB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740FA7C28DD706E00BA50DB /* Person.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		C72E6E2728F19CFC00BE824F /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		C72E6E2928F2F9D200BE824F /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
+		C72E6E2B28F307EE00BE824F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C740FA7728DCF19F00BA50DB /* ProfileSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwipePromo.swift; sourceTree = "<group>"; };
 		C740FA7928DD6DB900BA50DB /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		C740FA7C28DD706E00BA50DB /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				C7915FFC28EFEF1A00973C9D /* CardViews */,
+				C72E6E2B28F307EE00BE824F /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				C7E127A228DCB7310030C1F9 /* RoundedImage.swift in Sources */,
 				C740FA8828DD9BE200BA50DB /* ChatViewHeader.swift in Sources */,
 				C7B23D0E28E9A95C0004B2BD /* MatchesView.swift in Sources */,
+				C72E6E2C28F307EE00BE824F /* HomeView.swift in Sources */,
 				C7E1278A28DCB4AC0030C1F9 /* ContentView.swift in Sources */,
 				C740FA8C28E16CB300BA50DB /* MessageListVM.swift in Sources */,
 				C7E1279828DCB5B90030C1F9 /* AppStateManager.swift in Sources */,
