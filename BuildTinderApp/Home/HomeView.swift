@@ -18,6 +18,27 @@ struct HomeView: View {
             
             Spacer()
             
+            HStack {
+                CircleButtonView(type: .back) {
+                    //
+                }
+                
+                CircleButtonView(type: .no) {
+                    //
+                }
+                
+                CircleButtonView(type: .star) {
+                    //
+                }
+                
+                CircleButtonView(type: .heart) {
+                    //
+                }
+                
+                CircleButtonView(type: .lightning) {
+                    //
+                }
+            }
             
         }
     }
