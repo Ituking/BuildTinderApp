@@ -49,6 +49,7 @@ struct CardImageScroller: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 150)
+                                .opacity(Double(person.x / screenCutoff) - 1)
                             
                             Spacer()
                             
@@ -56,6 +57,7 @@ struct CardImageScroller: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 150)
+                                .opacity(Double(person.x / screenCutoff * -1 - 1))
                         }
                         
                         Spacer()
