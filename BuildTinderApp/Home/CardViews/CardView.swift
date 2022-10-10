@@ -20,14 +20,15 @@ struct CardView: View {
             if fullscreenMode {
                 FullScreenCardView(
                     person: person,
-                    fullScreenMode: $fullscreenMode
+                    fullScreenMode: $fullscreenMode,
+                    nameSpace: imageNamespace
                 )
             } else {
                 CardImageScroller(person: person, fullscreenMode: $fullscreenMode)
                     .animation(.easeOut(duration: 0.2))
                     .frame(width: geo.size.width - 20, height: geo.size.height)
                     .padding(.leading, 10)
-                    .matchedGeometryEffect(id: "ID", in: imageNamespace)
+                    .matchedGeometryEffect(id: "image\(person.id)", in: imageNamespace)
                     .offset(x: person.x, y: person.y)
                     .rotationEffect(.degrees(person.degree))
                     .gesture(
