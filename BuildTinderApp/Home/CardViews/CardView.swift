@@ -23,6 +23,7 @@ struct CardView: View {
                     fullScreenMode: $fullscreenMode,
                     nameSpace: imageNamespace
                 )
+                .animation(.easeOut(duration: 0.2))
             } else {
                 CardImageScroller(person: person, fullscreenMode: $fullscreenMode)
                     .animation(.easeOut(duration: 0.2))
