@@ -41,6 +41,16 @@ struct CardImageScroller: View {
                         .frame(width: geo.size.width, height: geo.size.height)
                         .clipped()
                     
+                    VStack {
+                        HStack {
+                            Image("likeButton")
+                            Spacer()
+                            Image("nopeButton")
+                        }
+                        
+                        Spacer()
+                    }
+                    
                     HStack {
                         Rectangle()
                             .onTapGesture(perform: {
