@@ -13,9 +13,8 @@ struct MainView: View {
     
     func correctViewForState() -> some View {
         switch appState.selectedTab {
-            
         case .fire:
-            let view = Text("Fire")
+            let view = HomeView()
             return AnyView(view)
         case .star:
             let view = MatchesView()

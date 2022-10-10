@@ -11,7 +11,7 @@ struct CardView: View {
     @State var person: Person
     @Binding var fullscreenMode: Bool
     
-    let screenCutOff = (UIScreen.main.bounds.width / 2) * 0.8
+    let screenCutoff = (UIScreen.main.bounds.width / 2) * 0.8
     
     @Namespace var imageNamespace
     
@@ -20,9 +20,8 @@ struct CardView: View {
             if fullscreenMode {
                 FullScreenCardView(
                     person: person,
-                    fullScreenMode: $fullscreenMode,
-                    nameSpace: imageNamespace
-                )
+                    fullscreenMode: $fullscreenMode,
+                    nameSpace: imageNamespace)
                 .animation(.easeOut(duration: 0.2))
             } else {
                 CardImageScroller(person: person, fullscreenMode: $fullscreenMode)
@@ -47,21 +46,21 @@ struct CardView: View {
                                 withAnimation(.interpolatingSpring(mass: 1.0, stiffness: 50, damping: 10, initialVelocity: 0)) {
                                     let width = value.translation.width
                                     
-                                    if width >= 0 && width <= screenCutOff {
+                                    if width >= 0 && width <= screenCutoff {
                                         // Snap back to middle
                                         person.x = 0
                                         person.y = 0
                                         person.degree = 0
-                                    } else if width  <= -1 && width >= -screenCutOff {
+                                    }  else if width <= -1 && width >= -screenCutoff {
                                         // Snap back to middle
                                         person.x = 0
                                         person.y = 0
                                         person.degree = 0
-                                    } else if width > screenCutOff {
+                                    } else if width > screenCutoff {
                                         // Swipe right
                                         person.x = 500
                                         person.degree = 12
-                                    } else if width < -screenCutOff {
+                                    } else if width < -screenCutoff {
                                         // Swipe left
                                         person.x = -500
                                         person.degree = -12

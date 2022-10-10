@@ -16,10 +16,10 @@ struct CardImageScroller: View {
     
     @Binding var fullscreenMode: Bool
     
-    func updateImageIndex(additon: Bool) {
+    func updateImageIndex(addition: Bool) {
         let newIndex: Int
         
-        if additon  {
+        if addition {
             newIndex = imageIndex + 1
         } else {
             newIndex = imageIndex - 1
@@ -66,11 +66,12 @@ struct CardImageScroller: View {
                     HStack {
                         Rectangle()
                             .onTapGesture(perform: {
-                                updateImageIndex(additon: false)
+                                updateImageIndex(addition: false)
                             })
+                        
                         Rectangle()
                             .onTapGesture(perform: {
-                                updateImageIndex(additon: true)
+                                updateImageIndex(addition: true)
                             })
                     }
                     .foregroundColor(Color.white.opacity(0.01))
@@ -94,17 +95,14 @@ struct CardImageScroller: View {
                             VStack(alignment: .leading) {
                                 HStack {
                                     Text(person.name)
-                                        .font(.system(size: 32))
-                                        .fontWeight(.heavy)
+                                        .font(.system(size: 32, weight: .heavy))
                                     
                                     Text(String(person.age))
-                                        .font(.system(size: 28))
-                                        .fontWeight(.light)
+                                        .font(.system(size: 28, weight: .light))
                                 }
                                 
                                 Text(person.bio)
-                                    .font(.system(size: 18))
-                                    .fontWeight(.medium)
+                                    .font(.system(size: 18, weight: .medium))
                                     .lineLimit(2)
                             }
                             
@@ -112,8 +110,7 @@ struct CardImageScroller: View {
                             
                             Button(action: { fullscreenMode = true }, label: {
                                 Image(systemName: "info.circle.fill")
-                                    .font(.system(size: 26))
-                                    .fontWeight(.medium)
+                                    .font(.system(size: 26, weight: .medium))
                             })
                         }
                         .padding(16)
