@@ -13,6 +13,8 @@ struct CardView: View {
     
     let screenCutOff = (UIScreen.main.bounds.width / 2) * 0.8
     
+    @Namespace var imageNamespace
+    
     var body: some View {
         GeometryReader { geo in
             if fullscreenMode {
@@ -25,6 +27,7 @@ struct CardView: View {
                     .animation(.easeOut(duration: 0.2))
                     .frame(width: geo.size.width - 20, height: geo.size.height)
                     .padding(.leading, 10)
+                    .matchedGeometryEffect(id: "ID", in: imageNamespace)
                     .offset(x: person.x, y: person.y)
                     .rotationEffect(.degrees(person.degree))
                     .gesture(
